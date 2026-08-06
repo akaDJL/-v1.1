@@ -295,6 +295,14 @@
   }
   let BACKEND_URL=(localStorage.getItem("jb_backend")||"").trim();
   function apiBase(){ const b=BACKEND_URL.replace(/\/+$/,""); return b? b : ""; }
+  function filterItems(items,region,keyword,type){
+    return items.filter(t=>{
+      if(type!=="all"&&t.type!==type)return false;
+      if(keyword){const hay=(t.title||"")+" "+(t.keywords||[]).join(" ");if(!hay.includes(keyword))return false;}
+      if(region){const rg=(t.region||"").trim(); if(!rg) return false; if(!rg.includes(region)&&!region.includes(rg)) return false;}
+      return true;
+    });
+  }
   async function fetchTenders(region,keyword,type){
     const q="region="+encodeURIComponent(region)+"&keyword="+encodeURIComponent(keyword)+"&type="+encodeURIComponent(type);
     const u=apiBase()? apiBase()+"/api/tenders?"+q : "/api/tenders?"+q;
@@ -308,14 +316,15 @@
       }catch(e){}
     }
     // 2) 真实快照(本地 tenders.json，由后端 LIVE 抓取导出) + 全领域示例填充
-    let live=[], updated="";
+    let live=[], updated="", allRegions=[];
     try{
       const r=await fetch("./tenders.json",{cache:"no-store"});
-      if(r.ok){ const j=await r.json(); if(j.items&&j.items.length){ live=j.items.map(x=>({...x,_src:"live"})); updated=j.updated_at||""; } }
+      if(r.ok){ const j=await r.json(); if(j.items&&j.items.length){ live=j.items.map(x=>({...x,_src:"live"})); updated=j.updated_at||""; allRegions=[...new Set(j.items.map(x=>(x.region||"").trim()).filter(Boolean))]; window._allRegions=allRegions; } }
     }catch(e){}
+    live=filterItems(live,region,keyword,type);
     const demo=mockTenders(region,keyword,type).map(x=>({...x,_src:"demo"}));
     const data=live.concat(demo);
-    if(live.length) return{src:"真实快照("+live.length+"条·更新 "+updated+") ＋ 全领域示例("+demo.length+"条)",data};
+    if(live.length||demo.length) return{src:"真实快照("+live.length+"条·更新 "+updated+")"+(demo.length?(" ＋ 示例("+demo.length+"条)"):""),data};
     return{src:"内置示例（在「数据源设置」填后端地址可接实时真实数据）",data:demo};
   }
   function candHTML(c){
@@ -332,7 +341,7 @@
   function renderTenders(list,src){
     const box=document.getElementById("tender_list");
     document.getElementById("i_stat").textContent="来源："+src+" · "+list.length+" 条";
-    if(!list.length){box.innerHTML='<div class="empty">无匹配情报，换个关键词试试。</div>';return;}
+    if(!list.length){box.innerHTML='<div class="empty">该区域 / 关键词暂无匹配情报。<br>已收录区域：'+((window._allRegions||[]).join("、")||"山西")+'<br>提示：区域框留空 = 看全部省份；可换这些省份或换个关键词。</div>';return;}
     box.innerHTML=list.map((t,i)=>{
       const srctag=t._src==="live"?'<span class="tag hit">真实</span>':'<span class="tag dim">示例</span>';
       const tag=t.type==="award"?'<span class="tag hit">中标公示</span>':'<span class="tag">招标公告</span>';
