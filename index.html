@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#185FA5">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="居间小助手">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href='data:application/manifest+json,{"name":"居间小助手","short_name":"居间","display":"standalone","background_color":"#ffffff","theme_color":"#185FA5"}'>
+<title>居间小助手 · 工程居间情报中枢</title>
+<style>
+  :root{
+    --blue:#185FA5; --blue50:#E6F1FB; --blue800:#0C447C;
+    --gray:#444441; --gray50:#F1EFE8; --line:#B4B2A9; --danger:#A32D2D;
+  }
+  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+  body{margin:0; font-family:-apple-system,system-ui,"Microsoft YaHei",sans-serif;
+       color:var(--gray); background:#fff; font-size:14px; line-height:1.5;}
+  header{background:var(--blue50); padding:14px 18px; border-bottom:1px solid var(--line);}
+  header h1{margin:0; font-size:18px; color:var(--blue800); font-weight:600;}
+  header p{margin:4px 0 0; font-size:12px; color:var(--gray);}
+  .wrap{max-width:720px; margin:0 auto; padding:14px 14px calc(80px + env(safe-area-inset-bottom));}
+  .card{border:1px solid var(--line); border-radius:12px; padding:14px; margin-bottom:14px;}
+  .card h2{margin:0 0 8px; font-size:14px; color:var(--blue800); font-weight:600;}
+  label{display:block; font-size:12px; color:var(--gray); margin:8px 0 4px;}
+  input,textarea,select{width:100%; padding:11px 12px; border:1px solid var(--line);
+        border-radius:8px; font-size:16px; font-family:inherit; background:#fff;}
+  textarea{resize:vertical; min-height:48px;}
+  .row{display:flex; gap:10px;} .row>*{flex:1; min-width:0;}
+  button{background:var(--blue); color:#fff; border:0; border-radius:8px;
+        padding:10px 14px; font-size:14px; cursor:pointer; font-family:inherit;}
+  button.sec{background:#fff; color:var(--blue); border:1px solid var(--blue);}
+  button.ghost{background:none; border:none; color:var(--blue); cursor:pointer; font-size:13px; padding:6px 4px;}
+  .toolbar{display:flex; gap:8px; flex-wrap:wrap; align-items:center;}
+  .stats{font-size:12px; color:var(--gray); margin-bottom:10px;}
+  .lead{border:1px solid var(--line); border-radius:10px; padding:12px; margin-bottom:10px;}
+  .lead .top{display:flex; justify-content:space-between; gap:10px; align-items:flex-start;}
+  .lead .title{font-weight:600; font-size:15px; color:#042C53;}
+  .badge{background:var(--blue50); color:var(--blue800); border-radius:20px;
+        padding:3px 11px; font-size:13px; font-weight:600; white-space:nowrap;}
+  .tags{margin-top:7px; font-size:12px;}
+  .tag{display:inline-block; background:var(--gray50); border-radius:6px;
+        padding:2px 8px; margin:2px 4px 2px 0; color:var(--gray);}
+  .tag.hit{background:var(--blue50); color:var(--blue800);}
+  .tag.dim{background:#ececec; color:#999; border:1px solid #e0e0e0;}
+  .meta{font-size:12px; color:var(--gray); margin-top:7px; word-break:break-all;}
+  .del{background:none; border:none; color:var(--danger); cursor:pointer; font-size:12px; padding:0; margin-top:6px;}
+  .hint{font-size:11px; color:var(--gray); margin-top:6px;}
+  .empty{text-align:center; color:var(--gray); padding:26px 0; font-size:13px;}
+  a{color:var(--blue);}
+  details.card > summary{list-style:none; outline:none; cursor:pointer; font-weight:600; color:var(--blue800);}
+  details.card > summary::-webkit-details-marker{display:none;}
+  details.card[open] > summary{margin-bottom:10px;}
+</style>
+</head>
+<body>
+<header>
+  <h1>居间小助手</h1>
+  <p>工程居间情报中枢 · 搜集 · 整理 · 推理 · 数据仅存你本地</p>
+</header>
+
+<div class="wrap">
+
+  <!-- 核心：自动情报 · 竞标图谱 -->
+  <div class="card">
+    <h2>自动情报 · 竞标图谱（核心）</h2>
+    <div class="hint">自动搜集招标/中标公告 → 整理去重评分 → 推理「可能参选单位」与体量。后端在线时实时抓，否则用内置示例演示闭环。</div>
+    <div class="row">
+      <div><label>区域</label><input id="i_region" placeholder="山西" /></div>
+      <div><label>关键词</label><input id="i_keyword" placeholder="环保" /></div>
+      <div><label>类型</label>
+        <select id="i_type">
+          <option value="all">全部</option><option value="tender">招标公告</option><option value="award">中标公示</option>
+        </select>
+      </div>
+    </div>
+    <div style="margin-top:10px" class="toolbar">
+      <button id="btn_fetch">拉取招标情报</button>
+      <span class="stats" id="i_stat"></span>
+    </div>
+    <div id="tender_list"></div>
+  </div>
+
+  <!-- 数据源设置（接真实后端） -->
+  <details class="card">
+    <summary>数据源设置（接真实后端，可选）</summary>
+    <div class="hint">默认用内置示例数据。若你已把后台 <code>tender_service.py</code> 部署到联网服务器并设 LIVE=True，把它的地址填这里（如 https://你的后端.com），即可看到真实全领域招标数据。地址仅存你本机，不上传。</div>
+    <label>后端地址</label>
+    <input id="i_backend" placeholder="https://你的后端地址.com" />
+    <div style="margin-top:8px" class="toolbar">
+      <button id="btn_bsave">保存并刷新</button>
+      <button class="ghost" id="btn_bclear">清除（用示例）</button>
+    </div>
+  </details>
+
+  <!-- 次级：手动补充 -->
+  <details class="card">
+    <summary>手动补充线索（可选）</summary>
+    <div class="hint">网站没收录、靠人脉得知的情报，手动补一条，仅存你本地浏览器。</div>
+    <div class="row">
+      <div><label>目标区域（命中加权 +15）</label><input id="target" value="山西" /></div>
+    </div>
+    <label>标题（必填，含关键词自动识别赛道）</label>
+    <input id="f_title" placeholder="如：阳泉市矿区污水处理厂扩容工程EPC" />
+    <div class="row">
+      <div><label>区域</label><input id="f_region" placeholder="山西" /></div>
+      <div><label>金额（万元）</label><input id="f_amount" type="number" placeholder="0" /></div>
+    </div>
+    <div class="row">
+      <div><label>发布日期</label><input id="f_date" placeholder="2026-08-05" /></div>
+      <div><label>联系人</label><input id="f_contact" placeholder="张主任 0351-xxxx" /></div>
+    </div>
+    <label>链接</label>
+    <input id="f_url" placeholder="https://..." />
+    <label>备注 / 关键词补充</label>
+    <textarea id="f_desc" placeholder="如：市政污水、环保、需总包资质"></textarea>
+    <div style="margin-top:10px" class="toolbar">
+      <button id="btn_add">添加线索</button>
+      <button class="ghost" id="btn_sample">载入示例</button>
+    </div>
+    <div class="toolbar" style="margin:10px 0">
+      <button class="sec" id="btn_export">导出 CSV</button>
+      <button class="sec" id="btn_import">导入 CSV</button>
+      <button class="sec" id="btn_clear">清空数据</button>
+      <input id="file" type="file" accept=".csv" style="display:none" />
+    </div>
+    <div id="mine_list"></div>
+  </details>
+
+  <div class="hint">
+    <b>这是人人可访问的真实情报站</b>：默认展示「真实快照」（由后端 LIVE 抓取公开政府采购/招标公告导出，标注<span class="tag hit" style="padding:1px 6px">真实</span>）+ 全领域<span class="tag dim" style="padding:1px 6px">示例</span>填充，各工程领域都不空。
+    数据来自公开政府信息，纯前端零后端也能看；要接你自己的<b>实时</b>后端，在「数据源设置」填地址即可。
+    <b>手机当 App 用</b>：手机浏览器打开后点右上角「⋯ / 菜单」→「添加到主屏幕」，从桌面图标进入全屏离线可用。
+    重要数据请定期「导出 CSV」备份；换设备 / 清缓存会丢失。
+  </div>
+</div>
+
+<script>
+  const KEYWORDS = ["环保","EPC","污水处理","生态修复","垃圾焚烧","扬尘治理","脱硫脱硝","市政","管网","管廊","供热","供水","燃气","公路","桥梁","隧道","铁路","轨道交通","交通","水利","水库","水电站","电力","输变电","光伏","风电","新能源","石化","化工","炼油","机电","安装","钢结构","冶金","矿山","煤矿","房建","建筑","医院","学校","棚改","安置房","机场","港口","航道","通信"];
+  const LS_KEY = "jieban_leads_v1";
+  let leads = load();
+
+  function load(){ try{ return JSON.parse(localStorage.getItem(LS_KEY)) || []; }catch(e){ return []; } }
+  function save(){ localStorage.setItem(LS_KEY, JSON.stringify(leads)); }
+  function target(){ return (document.getElementById("target").value || "山西").trim(); }
+  function esc(s){ return (s||"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+
+  // ---------- 私有线索（手动补充，次要）----------
+  function scoreOf(l){
+    const text = (l.title||"") + " " + (l.desc||"");
+    const hits = KEYWORDS.filter(k => text.includes(k));
+    let s = hits.length * 10;
+    if ((l.region||"").trim() === target()) s += 15;
+    s += Math.min((parseFloat(l.amount_wan)||0)/1000, 20);
+    return { s: Math.round(s*10)/10, hits };
+  }
+  function renderMine(){
+    const list = document.getElementById("mine_list");
+    const data = leads.map(l => ({ l, ...scoreOf(l) })).sort((a,b)=>b.s-a.s);
+    if (!data.length){ list.innerHTML = '<div class="empty">暂无手动线索。主要靠上方自动情报即可。</div>'; return; }
+    list.innerHTML = data.map(d => {
+      const l = d.l;
+      const tags = KEYWORDS.map(k => `<span class="tag ${d.hits.includes(k)?'hit':''}">${k}</span>`).join("");
+      const star = (l.region||"").trim() === target() ? ' <span class="tag hit">★区域命中</span>' : '';
+      return `<div class="lead">
+        <div class="top"><div class="title">${esc(l.title||"未命名")}</div><div class="badge">${d.s}分</div></div>
+        <div class="tags">${tags}${star}</div>
+        <div class="meta">${esc(l.region||"")}${(parseFloat(l.amount_wan)||0)?(' · '+l.amount_wan+'万'):''}${l.publish_date?(' · '+esc(l.publish_date)):''} · ${esc(l.contact||"")}${l.url?(' · <a href="'+esc(l.url)+'" target="_blank" rel="noopener">链接</a>'):''}</div>
+        <button class="del" data-id="${l.id}">删除</button>
+      </div>`;
+    }).join("");
+    list.querySelectorAll(".del").forEach(b => b.onclick = () => { leads = leads.filter(x => x.id !== b.dataset.id); save(); renderMine(); });
+  }
+  function addLead(){
+    const title = document.getElementById("f_title").value.trim();
+    if (!title){ alert("标题必填"); return; }
+    leads.push({ id: Date.now()+""+Math.floor(Math.random()*1000), title,
+      region: document.getElementById("f_region").value.trim() || target(),
+      amount_wan: document.getElementById("f_amount").value.trim(),
+      publish_date: document.getElementById("f_date").value.trim(),
+      contact: document.getElementById("f_contact").value.trim(),
+      url: document.getElementById("f_url").value.trim(),
+      desc: document.getElementById("f_desc").value.trim() });
+    save(); renderMine();
+    ["f_title","f_region","f_amount","f_date","f_contact","f_url","f_desc"].forEach(id => document.getElementById(id).value="");
+  }
+  function exportCSV(){
+    if (!leads.length){ alert("暂无数据"); return; }
+    const head = ["title","region","amount_wan","publish_date","contact","url","desc"];
+    const lines = [head.join(",")];
+    leads.forEach(l => lines.push(head.map(h => csvCell(l[h]||"")).join(",")));
+    const blob = new Blob(["\ufeff"+lines.join("\n")], {type:"text/csv;charset=utf-8"});
+    const a = document.createElement("a"); a.href = URL.createObjectURL(blob);
+    a.download = "居间线索_" + new Date().toISOString().slice(0,10) + ".csv"; a.click();
+  }
+  function csvCell(v){ v=(v+"").replace(/"/g,'""'); return /[",\n]/.test(v)?'"'+v+'"':v; }
+  function importCSV(file){
+    const reader = new FileReader();
+    reader.onload = e => {
+      const rows = e.target.result.split(/\r?\n/).filter(Boolean);
+      const head = rows.shift().split(",").map(s=>s.trim());
+      let n=0;
+      rows.forEach(line => { const cols=line.split(","); const o={}; head.forEach((h,i)=>o[h]=cols[i]||"");
+        leads.push({ id:Date.now()+""+Math.floor(Math.random()*100000), title:o.title||"", region:o.region||target(),
+          amount_wan:o.amount_wan||"", publish_date:o.publish_date||"", contact:o.contact||"", url:o.url||"", desc:o.desc||"" }); n++; });
+      save(); renderMine(); alert("已导入 "+n+" 条");
+    };
+    reader.readAsText(file, "utf-8");
+  }
+  function sample(){
+    const ex = [
+      ["阳泉市矿区污水处理厂扩容工程EPC","山西",6800,"2026-08-03","阳泉市住建局 0353-xxxx","","市政污水"],
+      ["吕梁市生活垃圾资源化发电项目","山西",11200,"2026-08-02","吕梁市城管局 0358-xxxx","","垃圾焚烧"],
+      ["晋城市工业园区脱硫脱硝超低排放改造","山西",4500,"2026-08-01","晋城市生态环境局 0356-xxxx","","环保"],
+    ];
+    ex.forEach((r,i)=> leads.push({ id:Date.now()+""+i, title:r[0], region:r[1], amount_wan:r[2],
+      publish_date:r[3], contact:r[4], url:"", desc:r[5] }));
+    save(); renderMine();
+  }
+
+  // ================= 自动情报 · 竞标图谱（核心）=================
+  const ENTERPRISES = [
+    {id:1,name:"山西建设投资集团有限公司",region:"山西太原",reg_capital:500000,employees:20000,qual:["市政公用工程施工总承包特级","建筑工程施工总承包特级","环保工程专业承包壹级"],history:["市政","房建","EPC","污水处理","生态修复"]},
+    {id:2,name:"山西省工业设备安装集团有限公司",region:"山西太原",reg_capital:120000,employees:3500,qual:["机电工程施工总承包壹级","环保工程专业承包壹级","钢结构工程专业承包壹级"],history:["机电","安装","环保","石化","EPC"]},
+    {id:3,name:"中化二建集团有限公司",region:"山西太原",reg_capital:150000,employees:6000,qual:["石油化工工程施工总承包特级","环保工程专业承包壹级"],history:["石化","化工","炼油","环保","EPC"]},
+    {id:4,name:"山西水务投资集团有限公司",region:"山西太原",reg_capital:300000,employees:1500,qual:["水利水电工程施工总承包壹级","市政公用工程总承包壹级"],history:["水利","水库","供水","污水处理","市政"]},
+    {id:5,name:"山西大地环境投资控股有限公司",region:"山西太原",reg_capital:200000,employees:800,qual:["生态修复","环保工程专业承包壹级"],history:["生态修复","环保","市政"]},
+    {id:6,name:"山西交控生态环境科技有限公司",region:"山西太原",reg_capital:50000,employees:600,qual:["环保工程专业承包壹级","市政公用工程总承包贰级"],history:["环保","生态修复","扬尘治理"]},
+    {id:7,name:"山西尚风科技股份有限公司",region:"山西太原",reg_capital:12000,employees:400,qual:["环保工程专业承包贰级","扬尘治理专项"],history:["扬尘治理","环保"]},
+    {id:8,name:"太原市政建设集团有限公司",region:"山西太原",reg_capital:80000,employees:2500,qual:["市政公用工程施工总承包壹级"],history:["市政","污水处理","EPC","管网"]},
+    {id:9,name:"中铁十二局集团有限公司",region:"山西太原",reg_capital:600000,employees:30000,qual:["铁路工程施工总承包特级","市政公用工程总承包特级","环保工程专业承包壹级"],history:["铁路","公路","市政","EPC"]},
+    {id:10,name:"山西四建集团有限公司",region:"山西太原",reg_capital:100000,employees:5000,qual:["建筑工程施工总承包特级","市政公用工程总承包壹级","环保工程专业承包壹级"],history:["房建","建筑","EPC","市政"]},
+    {id:11,name:"山西路桥建设集团有限公司",region:"山西太原",reg_capital:300000,employees:6000,qual:["公路工程施工总承包特级","桥梁工程专业承包壹级"],history:["公路","桥梁","交通"]},
+    {id:12,name:"中铁三局集团有限公司",region:"山西太原",reg_capital:500000,employees:28000,qual:["铁路工程施工总承包特级","公路工程施工总承包特级","市政公用工程总承包特级"],history:["铁路","公路","市政","桥梁","EPC"]},
+    {id:13,name:"中铁十七局集团有限公司",region:"山西太原",reg_capital:400000,employees:22000,qual:["铁路工程施工总承包特级","公路工程施工总承包壹级"],history:["铁路","公路","市政"]},
+    {id:14,name:"山西八建集团有限公司",region:"山西太原",reg_capital:100000,employees:4500,qual:["建筑工程施工总承包壹级","钢结构工程专业承包壹级"],history:["房建","建筑","钢结构","EPC"]},
+    {id:15,name:"山西一建集团有限公司",region:"山西太原",reg_capital:80000,employees:3800,qual:["建筑工程施工总承包壹级"],history:["房建","建筑","安置房"]},
+    {id:16,name:"中国建筑第三工程局有限公司",region:"湖北武汉",reg_capital:800000,employees:40000,qual:["建筑工程施工总承包特级","市政公用工程总承包特级"],history:["房建","建筑","市政","EPC","医院"]},
+    {id:17,name:"中国建筑第八工程局有限公司",region:"上海",reg_capital:1000000,employees:45000,qual:["建筑工程施工总承包特级","市政公用工程总承包特级"],history:["房建","建筑","机场","EPC"]},
+    {id:18,name:"中交第一公路工程局有限公司",region:"北京",reg_capital:600000,employees:25000,qual:["公路工程施工总承包特级","桥梁工程专业承包壹级"],history:["公路","桥梁","交通","EPC"]},
+    {id:19,name:"中交第二公路工程局有限公司",region:"陕西西安",reg_capital:500000,employees:20000,qual:["公路工程施工总承包特级","隧道工程专业承包壹级"],history:["公路","桥梁","隧道","交通"]},
+    {id:20,name:"中国电建集团",region:"北京",reg_capital:2000000,employees:120000,qual:["水利水电工程施工总承包特级","电力工程施工总承包特级"],history:["水利","水电站","电力","新能源","光伏","风电"]},
+    {id:21,name:"中国能源建设集团山西电力建设有限公司",region:"山西太原",reg_capital:100000,employees:5000,qual:["电力工程施工总承包壹级","机电工程施工总承包壹级"],history:["电力","输变电","机电","安装"]},
+    {id:22,name:"中煤建筑安装工程集团有限公司",region:"河北邯郸",reg_capital:300000,employees:12000,qual:["矿山工程施工总承包特级","建筑工程施工总承包壹级"],history:["矿山","煤矿","房建","安装"]},
+    {id:23,name:"山西焦煤集团",region:"山西太原",reg_capital:1000000,employees:80000,qual:["矿山工程施工总承包壹级"],history:["矿山","煤矿"]},
+    {id:24,name:"山西能源集团有限公司",region:"山西太原",reg_capital:400000,employees:6000,qual:["电力工程施工总承包壹级"],history:["电力","新能源","光伏","风电"]},
+    {id:25,name:"山西二建集团有限公司",region:"山西太原",reg_capital:90000,employees:4000,qual:["建筑工程施工总承包壹级"],history:["房建","建筑","市政"]},
+    {id:26,name:"山西建筑工程集团有限公司",region:"山西太原",reg_capital:150000,employees:7000,qual:["建筑工程施工总承包特级","市政公用工程总承包壹级"],history:["房建","建筑","市政","EPC"]},
+    {id:27,name:"太原钢铁(集团)建设有限公司",region:"山西太原",reg_capital:60000,employees:3000,qual:["冶金工程施工总承包壹级","建筑工程施工总承包壹级"],history:["冶金","房建","钢结构"]},
+    {id:28,name:"山西机械化建设集团有限公司",region:"山西太原",reg_capital:70000,employees:3000,qual:["公路工程施工总承包壹级","市政公用工程总承包壹级"],history:["公路","市政","机场","场平"]},
+    {id:29,name:"大同市政建设发展有限公司",region:"山西大同",reg_capital:30000,employees:1500,qual:["市政公用工程施工总承包壹级"],history:["市政","管网","供热"]},
+    {id:30,name:"山西五建集团有限公司",region:"山西太原",reg_capital:85000,employees:3800,qual:["建筑工程施工总承包壹级","市政公用工程总承包壹级"],history:["房建","建筑","市政"]}
+  ];
+  const MOCK_TENDERS = [
+    {title:"阳泉市矿区污水处理厂扩容工程EPC总承包招标公告",region:"山西阳泉",amount_wan:6800,publish_date:"2026-08-04",buyer:"阳泉市住房和城乡建设局",contact:"阳泉市住建局 0353-xxxx",url:"",type:"tender",qual:["市政公用工程施工总承包壹级","环保工程专业承包壹级"],keywords:["市政","污水处理","EPC","环保"]},
+    {title:"吕梁市生活垃圾焚烧发电项目特许经营权招标",region:"山西吕梁",amount_wan:11200,publish_date:"2026-08-03",buyer:"吕梁市城市管理局",contact:"吕梁市城管局 0358-xxxx",url:"",type:"tender",qual:["电力工程施工总承包壹级","环保工程专业承包壹级"],keywords:["垃圾焚烧","环保","EPC"]},
+    {title:"晋城市工业园区脱硫脱硝超低排放改造EPC",region:"山西晋城",amount_wan:4500,publish_date:"2026-08-02",buyer:"晋城市生态环境局",contact:"晋城市生态环境局 0356-xxxx",url:"",type:"tender",qual:["环保工程专业承包壹级"],keywords:["环保","脱硫脱硝","EPC"]},
+    {title:"大同市御河生态修复综合治理工程",region:"山西大同",amount_wan:23000,publish_date:"2026-08-01",buyer:"大同市水务局",contact:"大同市水务局 0352-xxxx",url:"",type:"tender",qual:["水利水电工程施工总承包壹级","市政公用工程施工总承包特级"],keywords:["生态修复","市政","环保"]},
+    {title:"长治市主城区雨污分流改造工程EPC中标候选人公示",region:"山西长治",amount_wan:9800,publish_date:"2026-07-31",buyer:"长治市城市建设工程公司",contact:"",url:"",type:"award",qual:["市政公用工程施工总承包壹级"],keywords:["市政","污水处理","EPC"],winner:"山西建设投资集团有限公司",winner_amount_wan:9560,candidates:["山西建设投资集团有限公司","太原市政建设集团有限公司","山西四建集团有限公司"]},
+    {title:"山西省高速公路网加密工程某段施工招标公告",region:"山西",amount_wan:85000,publish_date:"2026-07-30",buyer:"山西省交通运输厅",contact:"山西省交通建设中心 0351-xxxx",url:"",type:"tender",qual:["公路工程施工总承包特级","桥梁工程专业承包壹级"],keywords:["公路","桥梁","交通"]},
+    {title:"太原市某三甲医院新院区建设工程EPC总承包招标",region:"山西太原",amount_wan:120000,publish_date:"2026-07-29",buyer:"太原市卫生健康委员会",contact:"太原市卫健委 0351-xxxx",url:"",type:"tender",qual:["建筑工程施工总承包特级","机电工程施工总承包壹级"],keywords:["房建","建筑","医院","EPC","机电"]},
+    {title:"山西省某抽水蓄能电站引水系统及厂房工程招标",region:"山西",amount_wan:180000,publish_date:"2026-07-28",buyer:"某抽水蓄能有限公司",contact:"",url:"",type:"tender",qual:["水利水电工程施工总承包特级"],keywords:["水利","水电站","电力"]},
+    {title:"山西某燃煤电厂2×1000MW机组扩建工程EPC中标候选人公示",region:"山西",amount_wan:220000,publish_date:"2026-07-27",buyer:"某能源集团",contact:"",url:"",type:"award",qual:["电力工程施工总承包特级","机电工程施工总承包壹级"],keywords:["电力","输变电","机电","EPC"],winner:"中国能源建设集团山西电力建设有限公司",winner_amount_wan:215000,candidates:["中国能源建设集团山西电力建设有限公司","山西省工业设备安装集团有限公司","中国电建集团"]},
+    {title:"山西某露天煤矿智能化升级改造项目招标",region:"山西",amount_wan:95000,publish_date:"2026-07-26",buyer:"某矿业集团",contact:"",url:"",type:"tender",qual:["矿山工程施工总承包特级"],keywords:["矿山","煤矿"]},
+    {title:"山西某经开区标准厂房及安置房建设项目EPC",region:"山西",amount_wan:70000,publish_date:"2026-07-25",buyer:"某经济技术开发区管委会",contact:"",url:"",type:"tender",qual:["建筑工程施工总承包壹级"],keywords:["房建","建筑","安置房","EPC"]},
+    {title:"山西某县农光互补光伏电站及配套风电场EPC总承包招标",region:"山西",amount_wan:135000,publish_date:"2026-07-24",buyer:"某新能源开发公司",contact:"",url:"",type:"tender",qual:["电力工程施工总承包特级"],keywords:["新能源","光伏","风电","电力","EPC"]}
+  ];
+  function scaleAdvice(a){a=parseFloat(a)||0;if(a>=20000)return{level:"大型",qual_level:"特级 / 壹级总承包",note:"建议对接大型央企/省属建工集团"};if(a>=5000)return{level:"中型",qual_level:"壹级总承包 / 专业承包",note:"省属建工及大型专业公司可承接"};if(a>=1000)return{level:"中小型",qual_level:"贰级以上",note:"地市级骨干企业合适"};return{level:"小型",qual_level:"叁级即可",note:"本地中小施工企业可参与"};}
+  function candidatesFor(t){
+    const region=t.region||"",need_qual=t.qual||[],kws=new Set(t.keywords||[]),amount=parseFloat(t.amount_wan)||0;
+    const scored=ENTERPRISES.map(e=>{
+      let s=0,reasons=[];
+      if(region&&region.slice(0,2)===e.region.slice(0,2)){s+=20;reasons.push("本省企业");}
+      const hit_qual=need_qual.filter(q=>e.qual.some(eq=>q.includes(eq)||eq.includes(q)));
+      s+=hit_qual.length*10; if(hit_qual.length)reasons.push("资质匹配"+hit_qual.length+"项");
+      const hh=[...kws].filter(k=>e.history.includes(k)); s+=hh.length*8; if(hh.length)reasons.push("历史做过"+hh.join("/"));
+      const cap=e.reg_capital;
+      if(amount>0){ if(cap>=amount/3){s+=10;reasons.push("体量适配");} else if(cap>=amount/10){s+=4;} else {s-=6;reasons.push("体量偏小");} }
+      return{id:e.id,name:e.name,region:e.region,reg_capital_wan:e.reg_capital,employees:e.employees,qual:e.qual,score:s,reasons};
+    });
+    scored.sort((a,b)=>b.score-a.score);
+    return{tender:{title:t.title,region,amount_wan:amount,buyer:t.buyer||"",qual:need_qual,keywords:[...kws]},scale:scaleAdvice(amount),candidates:scored.slice(0,6),winner:t.winner,candidates_award:t.candidates||[]};
+  }
+  function mockTenders(region,keyword,type){
+    let items=MOCK_TENDERS.filter(t=>{
+      if(type!=="all"&&t.type!==type)return false;
+      if(keyword){const hay=t.title+" "+(t.keywords||[]).join(" ");if(!hay.includes(keyword))return false;}
+      return true;
+    });
+    items.forEach(t=>{let s=(t.keywords||[]).length*10;if(region&&t.region.includes(region))s+=15;s+=Math.min((t.amount_wan||0)/1000,20);t.score=Math.round(s*10)/10;});
+    items.sort((a,b)=>(b.score||0)-(a.score||0));
+    return items;
+  }
+  let BACKEND_URL=(localStorage.getItem("jb_backend")||"").trim();
+  function apiBase(){ const b=BACKEND_URL.replace(/\/+$/,""); return b? b : ""; }
+  async function fetchTenders(region,keyword,type){
+    const q="region="+encodeURIComponent(region)+"&keyword="+encodeURIComponent(keyword)+"&type="+encodeURIComponent(type);
+    const u=apiBase()? apiBase()+"/api/tenders?"+q : "/api/tenders?"+q;
+    // 1) 接了后端地址 → 实时真实抓取
+    if(apiBase()){
+      try{
+        const r=await fetch(u,{headers:{Accept:"application/json"}});
+        if(!r.ok)throw 0;
+        const d=await r.json();
+        if(Array.isArray(d)&&d.length)return{src:"后端实时抓 ("+apiBase()+")",data:d.map(x=>({...x,_src:"live"}))};
+      }catch(e){}
+    }
+    // 2) 真实快照(本地 tenders.json，由后端 LIVE 抓取导出) + 全领域示例填充
+    let live=[], updated="";
+    try{
+      const r=await fetch("./tenders.json",{cache:"no-store"});
+      if(r.ok){ const j=await r.json(); if(j.items&&j.items.length){ live=j.items.map(x=>({...x,_src:"live"})); updated=j.updated_at||""; } }
+    }catch(e){}
+    const demo=mockTenders(region,keyword,type).map(x=>({...x,_src:"demo"}));
+    const data=live.concat(demo);
+    if(live.length) return{src:"真实快照("+live.length+"条·更新 "+updated+") ＋ 全领域示例("+demo.length+"条)",data};
+    return{src:"内置示例（在「数据源设置」填后端地址可接实时真实数据）",data:demo};
+  }
+  function candHTML(c){
+    const sc=c.scale;
+    const wl=c.winner?`<div class="meta"><b>实际中标人：${esc(c.winner)}</b>${c.tender.amount_wan?("（推测 "+c.tender.amount_wan+"万）"):""}</div>`:"";
+    const ca=(c.candidates_award&&c.candidates_award.length)?`<div class="meta">中标候选：${c.candidates_award.map(esc).join("、")}</div>`:"";
+    const cards=c.candidates.map(e=>`<div class="lead" style="margin-top:8px">
+      <div class="top"><div class="title" style="font-size:14px">${esc(e.name)}</div><div class="badge">${e.score}</div></div>
+      <div class="tags">${e.reasons.map(r=>`<span class="tag hit">${esc(r)}</span>`).join("")}</div>
+      <div class="meta">${esc(e.region)} · 注册资本${e.reg_capital_wan}万 · 人员${e.employees} · ${(e.qual||[]).join("/")}</div>
+    </div>`).join("");
+    return `<div class="hint">体量建议：${sc.level}项目 · 需${sc.qual_level} · ${sc.note}</div>${wl}${ca}${cards}`;
+  }
+  function renderTenders(list,src){
+    const box=document.getElementById("tender_list");
+    document.getElementById("i_stat").textContent="来源："+src+" · "+list.length+" 条";
+    if(!list.length){box.innerHTML='<div class="empty">无匹配情报，换个关键词试试。</div>';return;}
+    box.innerHTML=list.map((t,i)=>{
+      const srctag=t._src==="live"?'<span class="tag hit">真实</span>':'<span class="tag dim">示例</span>';
+      const tag=t.type==="award"?'<span class="tag hit">中标公示</span>':'<span class="tag">招标公告</span>';
+      const win=t.winner?`<div class="meta">中标人：<b>${esc(t.winner)}</b>${t.winner_amount_wan?(" "+t.winner_amount_wan+"万"):""}</div>`:"";
+      return `<div class="lead">
+        <div class="top"><div class="title">${esc(t.title||"未命名")}</div><div class="badge">${t.score!=null?t.score:""}分</div></div>
+        <div class="tags">${srctag}${tag}<span class="tag">${esc(t.region||"")}</span>${t.amount_wan?('<span class="tag">'+t.amount_wan+'万</span>'):''}</div>
+        <div class="meta">甲方：${esc(t.buyer||"")} · ${esc(t.contact||"")}${t.publish_date?(" · "+t.publish_date):""}</div>
+        ${win}
+        <button class="ghost" data-i="${i}">看可能参选单位 ▾</button>
+        <div id="cand_${i}" style="display:none"></div>
+      </div>`;
+    }).join("");
+    box.querySelectorAll("button.ghost").forEach(b=>b.onclick=()=>{
+      const i=b.dataset.i,el=document.getElementById("cand_"+i);
+      if(el.style.display==="none"){el.style.display="block";el.innerHTML=candHTML(candidatesFor(list[i]));b.textContent="收起 ▴";}
+      else{el.style.display="none";b.textContent="看可能参选单位 ▾";}
+    });
+  }
+
+  // ---------- 绑定 ----------
+  document.getElementById("btn_fetch").onclick=async()=>{
+    const region=document.getElementById("i_region").value.trim()||target();
+    const keyword=document.getElementById("i_keyword").value.trim();
+    const type=document.getElementById("i_type").value;
+    document.getElementById("i_stat").textContent="拉取中…";
+    const {src,data}=await fetchTenders(region,keyword,type);
+    renderTenders(data,src);
+  };
+  document.getElementById("btn_add").onclick=addLead;
+  document.getElementById("btn_sample").onclick=sample;
+  document.getElementById("btn_export").onclick=exportCSV;
+  document.getElementById("btn_import").onclick=()=>document.getElementById("file").click();
+  document.getElementById("file").onchange=e=>{ if(e.target.files[0]) importCSV(e.target.files[0]); e.target.value=""; };
+  document.getElementById("btn_clear").onclick=()=>{ if(confirm("确定清空全部手动线索？")){ leads=[]; save(); renderMine(); } };
+  document.getElementById("target").oninput=renderMine;
+
+  // ---------- 后端地址设置 ----------
+  document.getElementById("i_backend").value=BACKEND_URL;
+  function refreshAuto(){ const r=document.getElementById("i_region").value.trim()||target();
+    const k=document.getElementById("i_keyword").value.trim(); const t=document.getElementById("i_type").value;
+    document.getElementById("i_stat").textContent="拉取中…";
+    (async()=>{ const {src,data}=await fetchTenders(r,k,t); renderTenders(data,src); })(); }
+  document.getElementById("btn_bsave").onclick=()=>{ BACKEND_URL=(document.getElementById("i_backend").value||"").trim();
+    localStorage.setItem("jb_backend",BACKEND_URL); document.getElementById("i_backend").value=BACKEND_URL; refreshAuto(); };
+  document.getElementById("btn_bclear").onclick=()=>{ BACKEND_URL=""; localStorage.removeItem("jb_backend");
+    document.getElementById("i_backend").value=""; refreshAuto(); };
+
+  // ---------- 初始化：核心区默认自动拉取 ----------
+  document.getElementById("i_region").value=target();
+  renderMine();
+  (async()=>{ const {src,data}=await fetchTenders(target(),"",""); renderTenders(data,src); })();
+</script>
+</body>
+</html>
