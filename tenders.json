@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-08-06T10:11:53.989107",
+  "updated_at": "2026-08-06T11:28:15.250470",
   "is_live_snapshot": true,
-  "count": 32,
-  "real_count": 12,
+  "count": 41,
+  "real_count": 21,
   "items": [
     {
       "title": "太原市某三甲医院新院区建设工程EPC总承包招标",
@@ -387,6 +387,24 @@
       "score": 41.2
     },
     {
+      "title": "乌拉特后旗旅游服务中心“渡·阴山一探秘乌拉特后旗”线路基础设施提升改造工程中标（成交）...",
+      "region": "内蒙古",
+      "amount_wan": 0,
+      "publish_date": "",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ccgp.gov.cn/cggg/dfgg/cjgg/202608/t20260806_27081996.htm",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "改造",
+        "线路",
+        "路基",
+        "基础设施"
+      ],
+      "score": 40.0
+    },
+    {
       "title": "山西某露天煤矿智能化升级改造项目招标",
       "region": "山西",
       "amount_wan": 95000,
@@ -475,6 +493,39 @@
       "score": 34.5
     },
     {
+      "title": "兰州市消防救援支队原静中通指挥车升级改造项目中标公告",
+      "region": "甘肃",
+      "amount_wan": 0,
+      "publish_date": "",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ccgp.gov.cn/cggg/zygg/zbgg/202608/t20260806_27081987.htm",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "改造",
+        "升级",
+        "消防"
+      ],
+      "score": 30.0
+    },
+    {
+      "title": "广汉市交通运输局广汉市桥梁2026年定期检查购买服务项目...",
+      "region": "四川",
+      "amount_wan": 0,
+      "publish_date": "",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/510000/0202/20260806/005197d2df8eff38481d83354aa0bdd376d4.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "桥梁",
+        "交通"
+      ],
+      "score": 20.0
+    },
+    {
       "title": "种子保藏科研用房防渗维修及消防改造",
       "region": "云南",
       "amount_wan": 0,
@@ -491,13 +542,13 @@
       "score": 20.0
     },
     {
-      "title": "中国人民银行抚州市分行配电房改造项目（配电房及高低压配电设施改造项目）成交结果公示",
-      "region": "",
+      "title": "西北农林科技大学高低压配电室设施设备维修改造竞争性磋商",
+      "region": "陕西",
       "amount_wan": 0,
       "publish_date": "",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ccgp.gov.cn/cggg/zygg/cjgg/202608/t20260806_27081102.htm",
+      "url": "https://www.ccgp.gov.cn/cggg/zygg/jzxcs/202608/t20260806_27081989.htm",
       "type": "tender",
       "qual": [],
       "keywords": [
@@ -507,43 +558,135 @@
       "score": 20.0
     },
     {
-      "title": "保和镇四方碑村2026年水利设施建设项目(第二次)",
+      "title": "佳木斯大学附属第二医院监控系统安装服务购置(二次)竞争性磋商公告",
+      "region": "黑龙江",
+      "amount_wan": 0,
+      "publish_date": "",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ccgp.gov.cn/cggg/dfgg/jzxcs/202608/t20260806_27082012.htm",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "安装",
+        "医院"
+      ],
+      "score": 20.0
+    },
+    {
+      "title": "徐汇校区电力设备改造添置的公开招标公告",
+      "region": "上海",
+      "amount_wan": 0,
+      "publish_date": "",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ccgp.gov.cn/cggg/dfgg/gkzb/202608/t20260806_27081988.htm",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "电力",
+        "改造"
+      ],
+      "score": 20.0
+    },
+    {
+      "title": "泰宁县2026年度道路交通救济救助责任保险(二次)结果公...",
+      "region": "福建",
+      "amount_wan": 0,
+      "publish_date": "",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/350000/0201/20260806/dad5df86a64880c214b9b982744dc6a3.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "交通"
+      ],
+      "score": 10.0
+    },
+    {
+      "title": "上海市三新学校松江东部分校标准化食堂建设项目（二）的竞争...",
+      "region": "上海",
+      "amount_wan": 0,
+      "publish_date": "",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/310000/0201/20260806/46c891bd7e44b1f5f0429ceace041c67.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "学校"
+      ],
+      "score": 10.0
+    },
+    {
+      "title": "中国人民银行海东市分行综合楼外墙保温及供暖系统维修改造项...",
+      "region": "青海",
+      "amount_wan": 0,
+      "publish_date": "",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/630000/0201/20260806/2c8382a39f6f89d1019fd1d1655d709d.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "改造"
+      ],
+      "score": 10.0
+    },
+    {
+      "title": "达州市城市管理行政执法局2026年“城管通”通信服务项目...",
       "region": "四川",
       "amount_wan": 0,
       "publish_date": "",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/510000/0201/20260806/0051bab7c87a306b40aa87baa166718d6224.html",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/510000/0202/20260806/0051ecf19129dc5048dbaffe6964054700e2.html",
       "type": "tender",
       "qual": [],
       "keywords": [
-        "水利"
+        "通信"
       ],
       "score": 10.0
     },
     {
-      "title": "宁波中基国际招标有限公司关于丽水市人民医院光电抗衰系统采...",
+      "title": "Z1303002606692301秦皇岛市第二污水处理厂...",
+      "region": "河北",
+      "amount_wan": 0,
+      "publish_date": "",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/130000/0202/20260806/001370ed690c03924b57a21393e1af8c24a0.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "污水处理"
+      ],
+      "score": 10.0
+    },
+    {
+      "title": "金堂县妇幼保健院（金堂县妇女儿童医院）金堂县妇幼保健院膀...",
+      "region": "四川",
+      "amount_wan": 0,
+      "publish_date": "",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/510000/0202/20260806/00518ecf18df528e4dd89c2f2699a9945846.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "医院"
+      ],
+      "score": 10.0
+    },
+    {
+      "title": "中科标禾工程项目管理有限公司关于金华消防救援机动大队东阳...",
       "region": "浙江",
       "amount_wan": 0,
       "publish_date": "",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/330000/0202/20260806/0033e4ee7fc94e8b42e2abcd40767f40e640.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "医院"
-      ],
-      "score": 10.0
-    },
-    {
-      "title": "烟台黄渤海新区消防救援大队2026年度饮用水配送服务单位选定项目成交公告",
-      "region": "",
-      "amount_wan": 0,
-      "publish_date": "",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ccgp.gov.cn/cggg/zygg/cjgg/202608/t20260806_27081221.htm",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/330000/0202/20260806/00331a4cbeb25deb4721aeb52258884630aa.html",
       "type": "tender",
       "qual": [],
       "keywords": [
@@ -552,58 +695,88 @@
       "score": 10.0
     },
     {
-      "title": "柏乡县消防救援大队伙食配送服务项目公开招标公告",
-      "region": "",
+      "title": "长治职业技术学院机电控制实训室项目竞争性谈判结果公告",
+      "region": "山西",
       "amount_wan": 0,
       "publish_date": "",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202608/t20260806_27081223.htm",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/140000/0202/20260806/001430583713dd22487598dd173cc1fafc98.html",
       "type": "tender",
       "qual": [],
       "keywords": [
-        "消防"
+        "机电"
       ],
       "score": 10.0
     },
     {
-      "title": "哈尔滨工程大学北体育场北弧变电所土建工程成交公告",
-      "region": "",
+      "title": "上海交通大学变温扫描探针热显微镜国际公开招标公告",
+      "region": "上海",
       "amount_wan": 0,
       "publish_date": "",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ccgp.gov.cn/cggg/zygg/cjgg/202608/t20260806_27081112.htm",
+      "url": "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202608/t20260806_27081969.htm",
       "type": "tender",
       "qual": [],
       "keywords": [
-        "土建"
+        "交通"
       ],
       "score": 10.0
     },
     {
-      "title": "商洛市生态环境局镇安县分局商洛市镇安县重金属环境安全隐患排查整治工程测量及勘察项目中标...",
-      "region": "",
+      "title": "上海交通大学JUST望远镜光谱仪中标公告",
+      "region": "上海",
       "amount_wan": 0,
       "publish_date": "",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ccgp.gov.cn/cggg/dfgg/cjgg/202608/t20260806_27081257.htm",
+      "url": "https://www.ccgp.gov.cn/cggg/zygg/zbgg/202608/t20260806_27081972.htm",
       "type": "tender",
       "qual": [],
       "keywords": [
-        "整治"
+        "交通"
       ],
       "score": 10.0
     },
     {
-      "title": "西安市红会医院南院区1号楼中央空调设备预防性维修项目中标（成交）结果公告",
+      "title": "上海交通大学上海高级金融学院基础建设后期施工阶段咨询服务公开招标公告",
+      "region": "上海",
+      "amount_wan": 0,
+      "publish_date": "",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202608/t20260806_27081973.htm",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "交通"
+      ],
+      "score": 10.0
+    },
+    {
+      "title": "中南地区通信导航监视数字化协同运维平台公开招标公告",
       "region": "",
       "amount_wan": 0,
       "publish_date": "",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ccgp.gov.cn/cggg/dfgg/cjgg/202608/t20260806_27081260.htm",
+      "url": "https://www.ccgp.gov.cn/cggg/zygg/gkzb/202608/t20260806_27081967.htm",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "通信"
+      ],
+      "score": 10.0
+    },
+    {
+      "title": "北京中医药大学第三附属医院超声科超声经颅多普勒血流分析仪采购项目成交公告",
+      "region": "北京",
+      "amount_wan": 0,
+      "publish_date": "",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ccgp.gov.cn/cggg/zygg/cjgg/202608/t20260806_27081889.htm",
       "type": "tender",
       "qual": [],
       "keywords": [
@@ -612,47 +785,17 @@
       "score": 10.0
     },
     {
-      "title": "西安市红会医院洗手液、擦手纸、大盘纸供货(南北院区）(三次)中标（成交）结果公告",
-      "region": "",
+      "title": "达州市中西医结合医院电动手术台（骨科碳纤维手术床）中标（成交）结果公告",
+      "region": "四川",
       "amount_wan": 0,
       "publish_date": "",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ccgp.gov.cn/cggg/dfgg/cjgg/202608/t20260806_27081259.htm",
+      "url": "https://www.ccgp.gov.cn/cggg/dfgg/zbgg/202608/t20260806_27081995.htm",
       "type": "tender",
       "qual": [],
       "keywords": [
         "医院"
-      ],
-      "score": 10.0
-    },
-    {
-      "title": "哈尔滨医科大学附属第二医院第一手术室=手术床配件-腰托(2026246)中标（成交）结果公告",
-      "region": "",
-      "amount_wan": 0,
-      "publish_date": "",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ccgp.gov.cn/cggg/dfgg/cjgg/202608/t20260806_27081242.htm",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "医院"
-      ],
-      "score": 10.0
-    },
-    {
-      "title": "经开区第一学校校园文化建设项目（项目编号：PXHL-2026-011）更正公告",
-      "region": "",
-      "amount_wan": 0,
-      "publish_date": "",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ccgp.gov.cn/cggg/dfgg/gzgg/202608/t20260806_27081239.htm",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "学校"
       ],
       "score": 10.0
     }
