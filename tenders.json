@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-08-11T08:03:02.025277",
+  "updated_at": "2026-08-12T00:05:53.569049",
   "is_live_snapshot": true,
-  "count": 36,
-  "real_count": 16,
+  "count": 29,
+  "real_count": 9,
   "items": [
     {
       "title": "太原市某三甲医院新院区建设工程EPC总承包招标",
       "region": "山西太原",
       "amount_wan": 120000,
-      "publish_date": "2026-08-04",
+      "publish_date": "2026-08-05",
       "buyer": "太原市卫生健康委员会",
       "contact": "太原市卫健委 0351-xxxx",
       "url": "",
@@ -30,7 +30,7 @@
       "title": "山西某县农光互补光伏电站及配套风电场EPC总承包招标",
       "region": "山西",
       "amount_wan": 135000,
-      "publish_date": "2026-07-30",
+      "publish_date": "2026-07-31",
       "buyer": "某新能源开发公司",
       "contact": "",
       "url": "",
@@ -51,7 +51,7 @@
       "title": "四川某市第二污水处理厂及配套管网工程EPC中标",
       "region": "四川成都",
       "amount_wan": 42000,
-      "publish_date": "2026-07-17",
+      "publish_date": "2026-07-18",
       "buyer": "成都市水务局",
       "contact": "",
       "url": "",
@@ -80,7 +80,7 @@
       "title": "广东某工业园区供热管网及配套热电联产项目中标",
       "region": "广东广州",
       "amount_wan": 56000,
-      "publish_date": "2026-07-07",
+      "publish_date": "2026-07-08",
       "buyer": "广州市工业和信息化局",
       "contact": "",
       "url": "",
@@ -109,7 +109,7 @@
       "title": "山西某燃煤电厂2×1000MW机组扩建工程EPC中标候选人公示",
       "region": "山西",
       "amount_wan": 220000,
-      "publish_date": "2026-08-02",
+      "publish_date": "2026-08-03",
       "buyer": "某能源集团",
       "contact": "",
       "url": "",
@@ -137,7 +137,7 @@
       "title": "山西某经开区标准厂房及安置房建设项目EPC",
       "region": "山西",
       "amount_wan": 70000,
-      "publish_date": "2026-07-31",
+      "publish_date": "2026-08-01",
       "buyer": "某经济技术开发区管委会",
       "contact": "",
       "url": "",
@@ -157,7 +157,7 @@
       "title": "安徽某三甲医院新院区建设工程EPC总承包中标结果",
       "region": "安徽合肥",
       "amount_wan": 125000,
-      "publish_date": "2026-06-27",
+      "publish_date": "2026-06-28",
       "buyer": "安徽省卫生健康委员会",
       "contact": "",
       "url": "",
@@ -184,7 +184,7 @@
       "title": "大同市御河生态修复综合治理工程",
       "region": "山西大同",
       "amount_wan": 23000,
-      "publish_date": "2026-08-07",
+      "publish_date": "2026-08-08",
       "buyer": "大同市水务局",
       "contact": "大同市水务局 0352-xxxx",
       "url": "",
@@ -204,7 +204,7 @@
       "title": "山西省高速公路网加密工程某段施工招标公告",
       "region": "山西",
       "amount_wan": 85000,
-      "publish_date": "2026-08-05",
+      "publish_date": "2026-08-06",
       "buyer": "山西省交通运输厅",
       "contact": "山西省交通建设中心 0351-xxxx",
       "url": "",
@@ -224,7 +224,7 @@
       "title": "山西省某抽水蓄能电站引水系统及厂房工程招标",
       "region": "山西",
       "amount_wan": 180000,
-      "publish_date": "2026-08-03",
+      "publish_date": "2026-08-04",
       "buyer": "某抽水蓄能有限公司",
       "contact": "",
       "url": "",
@@ -243,7 +243,7 @@
       "title": "江苏某市轨道交通3号线一期工程施工总承包中标结果",
       "region": "江苏南京",
       "amount_wan": 320000,
-      "publish_date": "2026-07-27",
+      "publish_date": "2026-07-28",
       "buyer": "南京市轨道交通建设指挥部",
       "contact": "",
       "url": "",
@@ -270,7 +270,7 @@
       "title": "湖北某水电站大坝及引水隧洞工程中标结果公告",
       "region": "湖北宜昌",
       "amount_wan": 156000,
-      "publish_date": "2026-07-20",
+      "publish_date": "2026-07-21",
       "buyer": "湖北能源集团",
       "contact": "",
       "url": "",
@@ -296,7 +296,7 @@
       "title": "浙江某跨海大桥主桥施工中标结果公告",
       "region": "浙江宁波",
       "amount_wan": 210000,
-      "publish_date": "2026-07-12",
+      "publish_date": "2026-07-13",
       "buyer": "浙江省交通投资集团",
       "contact": "",
       "url": "",
@@ -323,7 +323,7 @@
       "title": "山东某港口扩建工程码头及堆场施工中标候选人公示",
       "region": "山东青岛",
       "amount_wan": 175000,
-      "publish_date": "2026-07-02",
+      "publish_date": "2026-07-03",
       "buyer": "山东港口集团",
       "contact": "",
       "url": "",
@@ -349,7 +349,7 @@
       "title": "阳泉市矿区污水处理厂扩容工程EPC总承包招标公告",
       "region": "山西阳泉",
       "amount_wan": 6800,
-      "publish_date": "2026-08-10",
+      "publish_date": "2026-08-11",
       "buyer": "阳泉市住房和城乡建设局",
       "contact": "阳泉市住建局 0353-xxxx",
       "url": "",
@@ -370,7 +370,7 @@
       "title": "吕梁市生活垃圾焚烧发电项目特许经营权招标",
       "region": "山西吕梁",
       "amount_wan": 11200,
-      "publish_date": "2026-08-09",
+      "publish_date": "2026-08-10",
       "buyer": "吕梁市城市管理局",
       "contact": "吕梁市城管局 0358-xxxx",
       "url": "",
@@ -390,7 +390,7 @@
       "title": "山西某露天煤矿智能化升级改造项目招标",
       "region": "山西",
       "amount_wan": 95000,
-      "publish_date": "2026-08-01",
+      "publish_date": "2026-08-02",
       "buyer": "某矿业集团",
       "contact": "",
       "url": "",
@@ -408,7 +408,7 @@
       "title": "河南某高速公路扩建工程XX标段施工中标候选人公示",
       "region": "河南郑州",
       "amount_wan": 88000,
-      "publish_date": "2026-07-24",
+      "publish_date": "2026-07-25",
       "buyer": "河南省交通运输厅",
       "contact": "",
       "url": "",
@@ -433,7 +433,7 @@
       "title": "长治市主城区雨污分流改造工程EPC中标候选人公示",
       "region": "山西长治",
       "amount_wan": 9800,
-      "publish_date": "2026-08-06",
+      "publish_date": "2026-08-07",
       "buyer": "长治市城市建设工程公司",
       "contact": "",
       "url": "",
@@ -459,7 +459,7 @@
       "title": "晋城市工业园区脱硫脱硝超低排放改造EPC",
       "region": "山西晋城",
       "amount_wan": 4500,
-      "publish_date": "2026-08-08",
+      "publish_date": "2026-08-09",
       "buyer": "晋城市生态环境局",
       "contact": "晋城市生态环境局 0356-xxxx",
       "url": "",
@@ -475,30 +475,13 @@
       "score": 34.5
     },
     {
-      "title": "汶川县绿色低碳新能源交通工具更新项目第1标段",
-      "region": "四川",
+      "title": "潍坊学院安顺校区锅炉、空气能洗浴供水改造项目采购更正公告（第一次）",
+      "region": "山东",
       "amount_wan": 0,
       "publish_date": "",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/510000/0104/20260811/0051db766dddaefd4a7286709c6dd4c4d4ac.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "交通",
-        "新能源",
-        "标段"
-      ],
-      "score": 30.0
-    },
-    {
-      "title": "镇安县县城供水提升改造工程（输配水工程）招标公告",
-      "region": "陕西",
-      "amount_wan": 0,
-      "publish_date": "",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/610000/0101/20260811/006156cbdf81a59e4056a71b24665cdb6a6a.html",
+      "url": "https://www.ccgp.gov.cn/cggg/dfgg/gzgg/202608/t20260811_27115584.htm",
       "type": "tender",
       "qual": [],
       "keywords": [
@@ -508,76 +491,28 @@
       "score": 20.0
     },
     {
-      "title": "长春市宽城区亚泰大街片区老旧小区配套基础设施改造工程（施...",
-      "region": "吉林",
+      "title": "长香西大道（S243-茅以升路）提升改造工程监理",
+      "region": "江苏",
       "amount_wan": 0,
       "publish_date": "",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/220000/0101/20260811/0022a2fc94e592d34fb88cc912eb97a022da.html",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/320000/0101/20260811/0032323b636a5eb94091ad8e86ced3d1aaab.html",
       "type": "tender",
       "qual": [],
       "keywords": [
-        "改造",
-        "基础设施"
-      ],
-      "score": 20.0
-    },
-    {
-      "title": "事业单位食堂搬迁装修改造项目采购中标结果公示",
-      "region": "",
-      "amount_wan": 0,
-      "publish_date": "",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/660000/0202/20260811/0066ec6b2b1bca0146b2a60323494f0e7bbc.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "改造",
-        "搬迁"
-      ],
-      "score": 20.0
-    },
-    {
-      "title": "西安医学院第一附属医院住院一部业务用房及设施改造项目施工...",
-      "region": "陕西",
-      "amount_wan": 0,
-      "publish_date": "",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/610000/0104/20260811/0061f8be927bfebc45adbd957a9d5970cfae.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "医院",
         "改造"
-      ],
-      "score": 20.0
-    },
-    {
-      "title": "武汉市公共资源交易中心（武汉市政府采购中心）2026-2...",
-      "region": "湖北",
-      "amount_wan": 0,
-      "publish_date": "",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/420000/0201/20260811/5b3770d0d93efc97607f9498ea9d8837.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "市政"
       ],
       "score": 10.0
     },
     {
-      "title": "2026年度第五师草原畜牧业转型升级项目（监理）二次招标...",
-      "region": "",
+      "title": "尉犁县2026年XLGC增量扩面提质升级项目公开招标公告",
+      "region": "新疆",
       "amount_wan": 0,
       "publish_date": "",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/660000/0101/20260811/00662177162e61dc479f8a57c9b5e8c5a0c8.html",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/650000/0201/20260811/00650b953c94cd2b4529b3569fb637c604d8.html",
       "type": "tender",
       "qual": [],
       "keywords": [
@@ -586,43 +521,13 @@
       "score": 10.0
     },
     {
-      "title": "西康高铁马鞍岭安置点基础设施建设项目（二期）",
-      "region": "陕西",
+      "title": "浙江大学紫金港校区藕舫路东侧人行道改造工程成交公告",
+      "region": "浙江",
       "amount_wan": 0,
       "publish_date": "",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/610000/0101/20260811/00616f7becc65a6843f3839f8717e19fc5d5.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "基础设施"
-      ],
-      "score": 10.0
-    },
-    {
-      "title": "泾阳县城北片区地下管网工程项目（二期）",
-      "region": "陕西",
-      "amount_wan": 0,
-      "publish_date": "",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/610000/0101/20260811/00614ec7f6d5d19e474183c6081603cb385e.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "管网"
-      ],
-      "score": 10.0
-    },
-    {
-      "title": "西咸新区沣东新城沣镐七里镇东里城中村改造项目外配套基础设...",
-      "region": "陕西",
-      "amount_wan": 0,
-      "publish_date": "",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/610000/0101/20260811/00614a9d18f0f6774bb1b6c02cdcd3706886.html",
+      "url": "https://www.ccgp.gov.cn/cggg/zygg/cjgg/202608/t20260811_27115224.htm",
       "type": "tender",
       "qual": [],
       "keywords": [
@@ -631,58 +536,13 @@
       "score": 10.0
     },
     {
-      "title": "遂宁市卓越中学校建设项目遂宁市卓越中学校建设项目-施工-...",
-      "region": "四川",
+      "title": "浙江大学玉泉校区羽毛球房改造工程成交公告",
+      "region": "浙江",
       "amount_wan": 0,
       "publish_date": "",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/510000/0104/20260811/00518b91976e7c284d3282ad62d31e4c884f.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "学校"
-      ],
-      "score": 10.0
-    },
-    {
-      "title": "山西省乡宁县昌宁镇炭峪西路崩塌地质灾害治理项目中标候选人...",
-      "region": "山西",
-      "amount_wan": 0,
-      "publish_date": "",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/140000/0104/20260811/0014daf9a37eabf4498a831c7f83d57c6af8.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "治理"
-      ],
-      "score": 10.0
-    },
-    {
-      "title": "中国矿业大学（北京）小纪汗煤矿深部水文勘察钻孔施工项目成交公告",
-      "region": "北京",
-      "amount_wan": 0,
-      "publish_date": "",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ccgp.gov.cn/cggg/zygg/cjgg/202608/t20260810_27106958.htm",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "煤矿"
-      ],
-      "score": 10.0
-    },
-    {
-      "title": "西北师范大学高层次人才工作室装修改造工程(二次)中标（成交）结果公告",
-      "region": "",
-      "amount_wan": 0,
-      "publish_date": "",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ccgp.gov.cn/cggg/dfgg/cjgg/202608/t20260811_27107437.htm",
+      "url": "https://www.ccgp.gov.cn/cggg/zygg/cjgg/202608/t20260811_27115222.htm",
       "type": "tender",
       "qual": [],
       "keywords": [
@@ -691,32 +551,62 @@
       "score": 10.0
     },
     {
-      "title": "四平市铁西区部分学校卫生间、阶梯教室、食堂、大门等维修项目中标(成交)结果公告",
-      "region": "",
+      "title": "浙江大学玉泉校区学生宿舍24舍改造工程中标公告",
+      "region": "浙江",
       "amount_wan": 0,
       "publish_date": "",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ccgp.gov.cn/cggg/dfgg/zbgg/202608/t20260811_27107436.htm",
+      "url": "https://www.ccgp.gov.cn/cggg/zygg/zbgg/202608/t20260811_27115220.htm",
       "type": "tender",
       "qual": [],
       "keywords": [
-        "学校"
+        "改造"
       ],
       "score": 10.0
     },
     {
-      "title": "龙城镇大成村基础设施提升项目中标(成交)结果公告",
-      "region": "",
+      "title": "新疆医科大学第七附属医院洗涤服务项目（二次）中标(成交)结果公告",
+      "region": "新疆",
       "amount_wan": 0,
       "publish_date": "",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ccgp.gov.cn/cggg/dfgg/zbgg/202608/t20260811_27107435.htm",
+      "url": "https://www.ccgp.gov.cn/cggg/dfgg/zbgg/202608/t20260811_27115709.htm",
       "type": "tender",
       "qual": [],
       "keywords": [
-        "基础设施"
+        "医院"
+      ],
+      "score": 10.0
+    },
+    {
+      "title": "山东科技大学泰安校区学生公寓洗衣机采购安装项目竞争性磋商公告",
+      "region": "山东",
+      "amount_wan": 0,
+      "publish_date": "",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ccgp.gov.cn/cggg/dfgg/jzxcs/202608/t20260811_27115691.htm",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "安装"
+      ],
+      "score": 10.0
+    },
+    {
+      "title": "山东科技大学泰安校区学生公寓直饮水机（含教学楼）采购安装项目竞争性磋商公告",
+      "region": "山东",
+      "amount_wan": 0,
+      "publish_date": "",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ccgp.gov.cn/cggg/dfgg/jzxcs/202608/t20260811_27115582.htm",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "安装"
       ],
       "score": 10.0
     }
