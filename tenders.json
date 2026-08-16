@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-08-14T18:20:47.780741",
+  "updated_at": "2026-08-16T21:05:33.738429",
   "is_live_snapshot": true,
-  "count": 111,
-  "real_count": 91,
+  "count": 87,
+  "real_count": 67,
   "items": [
     {
       "title": "太原市某三甲医院新院区建设工程EPC总承包招标",
       "region": "山西太原",
       "amount_wan": 120000,
-      "publish_date": "2026-08-07",
+      "publish_date": "2026-08-09",
       "buyer": "太原市卫生健康委员会",
       "contact": "太原市卫健委 0351-xxxx",
       "url": "",
@@ -30,7 +30,7 @@
       "title": "山西某县农光互补光伏电站及配套风电场EPC总承包招标",
       "region": "山西",
       "amount_wan": 135000,
-      "publish_date": "2026-08-02",
+      "publish_date": "2026-08-04",
       "buyer": "某新能源开发公司",
       "contact": "",
       "url": "",
@@ -51,7 +51,7 @@
       "title": "四川某市第二污水处理厂及配套管网工程EPC中标",
       "region": "四川成都",
       "amount_wan": 42000,
-      "publish_date": "2026-07-20",
+      "publish_date": "2026-07-22",
       "buyer": "成都市水务局",
       "contact": "",
       "url": "",
@@ -80,7 +80,7 @@
       "title": "广东某工业园区供热管网及配套热电联产项目中标",
       "region": "广东广州",
       "amount_wan": 56000,
-      "publish_date": "2026-07-10",
+      "publish_date": "2026-07-12",
       "buyer": "广州市工业和信息化局",
       "contact": "",
       "url": "",
@@ -109,7 +109,7 @@
       "title": "山西某燃煤电厂2×1000MW机组扩建工程EPC中标候选人公示",
       "region": "山西",
       "amount_wan": 220000,
-      "publish_date": "2026-08-05",
+      "publish_date": "2026-08-07",
       "buyer": "某能源集团",
       "contact": "",
       "url": "",
@@ -137,7 +137,7 @@
       "title": "山西某经开区标准厂房及安置房建设项目EPC",
       "region": "山西",
       "amount_wan": 70000,
-      "publish_date": "2026-08-03",
+      "publish_date": "2026-08-05",
       "buyer": "某经济技术开发区管委会",
       "contact": "",
       "url": "",
@@ -157,7 +157,7 @@
       "title": "安徽某三甲医院新院区建设工程EPC总承包中标结果",
       "region": "安徽合肥",
       "amount_wan": 125000,
-      "publish_date": "2026-06-30",
+      "publish_date": "2026-07-02",
       "buyer": "安徽省卫生健康委员会",
       "contact": "",
       "url": "",
@@ -184,7 +184,7 @@
       "title": "大同市御河生态修复综合治理工程",
       "region": "山西大同",
       "amount_wan": 23000,
-      "publish_date": "2026-08-10",
+      "publish_date": "2026-08-12",
       "buyer": "大同市水务局",
       "contact": "大同市水务局 0352-xxxx",
       "url": "",
@@ -204,7 +204,7 @@
       "title": "山西省高速公路网加密工程某段施工招标公告",
       "region": "山西",
       "amount_wan": 85000,
-      "publish_date": "2026-08-08",
+      "publish_date": "2026-08-10",
       "buyer": "山西省交通运输厅",
       "contact": "山西省交通建设中心 0351-xxxx",
       "url": "",
@@ -224,7 +224,7 @@
       "title": "山西省某抽水蓄能电站引水系统及厂房工程招标",
       "region": "山西",
       "amount_wan": 180000,
-      "publish_date": "2026-08-06",
+      "publish_date": "2026-08-08",
       "buyer": "某抽水蓄能有限公司",
       "contact": "",
       "url": "",
@@ -243,7 +243,7 @@
       "title": "江苏某市轨道交通3号线一期工程施工总承包中标结果",
       "region": "江苏南京",
       "amount_wan": 320000,
-      "publish_date": "2026-07-30",
+      "publish_date": "2026-08-01",
       "buyer": "南京市轨道交通建设指挥部",
       "contact": "",
       "url": "",
@@ -270,7 +270,7 @@
       "title": "湖北某水电站大坝及引水隧洞工程中标结果公告",
       "region": "湖北宜昌",
       "amount_wan": 156000,
-      "publish_date": "2026-07-23",
+      "publish_date": "2026-07-25",
       "buyer": "湖北能源集团",
       "contact": "",
       "url": "",
@@ -296,7 +296,7 @@
       "title": "浙江某跨海大桥主桥施工中标结果公告",
       "region": "浙江宁波",
       "amount_wan": 210000,
-      "publish_date": "2026-07-15",
+      "publish_date": "2026-07-17",
       "buyer": "浙江省交通投资集团",
       "contact": "",
       "url": "",
@@ -323,7 +323,7 @@
       "title": "山东某港口扩建工程码头及堆场施工中标候选人公示",
       "region": "山东青岛",
       "amount_wan": 175000,
-      "publish_date": "2026-07-05",
+      "publish_date": "2026-07-07",
       "buyer": "山东港口集团",
       "contact": "",
       "url": "",
@@ -349,7 +349,7 @@
       "title": "阳泉市矿区污水处理厂扩容工程EPC总承包招标公告",
       "region": "山西阳泉",
       "amount_wan": 6800,
-      "publish_date": "2026-08-13",
+      "publish_date": "2026-08-15",
       "buyer": "阳泉市住房和城乡建设局",
       "contact": "阳泉市住建局 0353-xxxx",
       "url": "",
@@ -370,7 +370,7 @@
       "title": "吕梁市生活垃圾焚烧发电项目特许经营权招标",
       "region": "山西吕梁",
       "amount_wan": 11200,
-      "publish_date": "2026-08-12",
+      "publish_date": "2026-08-14",
       "buyer": "吕梁市城市管理局",
       "contact": "吕梁市城管局 0358-xxxx",
       "url": "",
@@ -387,90 +387,10 @@
       "score": 41.2
     },
     {
-      "title": "威远县黑山羊规模化繁育养殖基地建设项目-配套设施-新建10kV双回线路厂区电力工程-威远县黑山羊规模化繁育养殖基地建设项目-配套设施-新建10kV双回线路厂区电力工程施工(重发公告第0次)第1次答疑文件",
-      "region": "四川",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/510000/0105/20260814/0051fbafed9d4b0443359f952bd36ca0ccfd.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "电力",
-        "新建",
-        "线路",
-        "厂区"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 40.0
-    },
-    {
-      "title": "2026年北辰区供热庭院管网及设施改造工程银辰供热站改造项目1标段招标公告",
-      "region": "天津",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/120000/0101/20260814/001291b3c352bdff433bb921529d75f66242.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "管网",
-        "供热",
-        "改造",
-        "标段"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 40.0
-    },
-    {
-      "title": "准格尔召镇供热中心锅炉环保改造项目施工标段（环保改造）中标候选人公示第1次",
-      "region": "内蒙古",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/150000/0104/20260814/001545a4c6d039a64919bac3d9f0c45b1852.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "环保",
-        "供热",
-        "改造",
-        "标段"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 40.0
-    },
-    {
-      "title": "日照市东港区涛雒片区排水管网提升改造工程（EPC)一标段全过程管理及跟踪审计中标（成交）公告",
-      "region": "山东",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/370000/0202/20260814/0037672ab99ff07a4a3bbc4a1087fe0a8b35.html",
-      "type": "award",
-      "qual": [],
-      "keywords": [
-        "EPC",
-        "管网",
-        "改造",
-        "标段"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "政府采购",
-      "score": 40.0
-    },
-    {
       "title": "山西某露天煤矿智能化升级改造项目招标",
       "region": "山西",
       "amount_wan": 95000,
-      "publish_date": "2026-08-04",
+      "publish_date": "2026-08-06",
       "buyer": "某矿业集团",
       "contact": "",
       "url": "",
@@ -488,7 +408,7 @@
       "title": "河南某高速公路扩建工程XX标段施工中标候选人公示",
       "region": "河南郑州",
       "amount_wan": 88000,
-      "publish_date": "2026-07-27",
+      "publish_date": "2026-07-29",
       "buyer": "河南省交通运输厅",
       "contact": "",
       "url": "",
@@ -513,7 +433,7 @@
       "title": "长治市主城区雨污分流改造工程EPC中标候选人公示",
       "region": "山西长治",
       "amount_wan": 9800,
-      "publish_date": "2026-08-09",
+      "publish_date": "2026-08-11",
       "buyer": "长治市城市建设工程公司",
       "contact": "",
       "url": "",
@@ -539,7 +459,7 @@
       "title": "晋城市工业园区脱硫脱硝超低排放改造EPC",
       "region": "山西晋城",
       "amount_wan": 4500,
-      "publish_date": "2026-08-11",
+      "publish_date": "2026-08-13",
       "buyer": "晋城市生态环境局",
       "contact": "晋城市生态环境局 0356-xxxx",
       "url": "",
@@ -555,937 +475,777 @@
       "score": 34.5
     },
     {
-      "title": "云南保山电力股份有限公司腾冲分公司2026年生产投资计划项目110千伏自治变电站增容扩建项目施工招标公告",
-      "region": "云南",
+      "title": "隰县第一中学校扩建工程(一期)项目工程总承包(EPC)中标候选人公示",
+      "region": "山西",
       "amount_wan": 0,
-      "publish_date": "2026-08-14",
+      "publish_date": "2026-08-15",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/530000/0101/20260814/00536ad5e3798d0b41ffa2b0399ac9815d52.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "电力",
-        "扩建",
-        "变电站"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 30.0
-    },
-    {
-      "title": "昆阳线路基换填整治、成昆线路基翻浆冒泥整治工程施工单价承包招标公告",
-      "region": "云南",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/530000/0101/20260814/00535217f675cfb046e78d1aa63b0d27f4c5.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "线路",
-        "路基",
-        "整治"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 30.0
-    },
-    {
-      "title": "清远市清城区新型韧性城市基础设施提升改造工程（一期）设计施工总承包（EPC）中标候选人公示",
-      "region": "广东",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0104/20260814/004464c6c5b024d5447d9d4d203744ae4133.html",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/140000/0104/20260815/0014d7eb5bbea4434f93b397bbf098a0ab21.html",
       "type": "tender",
       "qual": [],
       "keywords": [
         "EPC",
-        "改造",
-        "基础设施"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 30.0
-    },
-    {
-      "title": "靖江市乡镇供水管网工程-阜前路(工农路-新华路)给水管道新建工程平焊法兰专项采购招标文件",
-      "region": "江苏",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/320000/0105/20260814/003241d0eb738f4746528c40f6281ff5b05d.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "管网",
-        "供水",
-        "新建"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 30.0
-    },
-    {
-      "title": "靖江市乡镇供水管网工程-阜前路(工农路-新华路)给水管道新建工程平焊法兰专项采购(重发公告第2次)",
-      "region": "江苏",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/320000/0101/20260814/0032ff24c7fdb9c945eeb7b78296cfda51d8.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "管网",
-        "供水",
-        "新建"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 30.0
-    },
-    {
-      "title": "中宁县白岗完小等11所学校消防改造项目(二期）中标候选人公示",
-      "region": "宁夏",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/640000/0104/20260814/00647516069c8b3e42dbaab9bc080c81b971.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
         "学校",
-        "改造",
-        "消防"
+        "扩建"
       ],
       "source": "全国公共资源交易平台",
       "biz": "工程建设",
       "score": 30.0
     },
     {
-      "title": "项城市城乡供水一体化工程3标段中标结果公告",
-      "region": "河南",
+      "title": "沈阳至海口国家高速公路潮州饶平（粤闽界）至汕头龙湖段改扩建工程土建工程施工TJ9招标公告-沈阳至海口国家高速公路潮州饶平（粤闽界）至汕头龙湖段改扩建工程",
+      "region": "广东",
       "amount_wan": 0,
-      "publish_date": "2026-08-14",
+      "publish_date": "2026-08-15",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/410000/0104/20260814/004190d4b5db7018462491b7896372866c4e.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "供水",
-        "化工",
-        "标段"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 30.0
-    },
-    {
-      "title": "项城市城乡供水一体化工程2标段中标结果公告",
-      "region": "河南",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/410000/0104/20260814/0041172c7e40851e4b48ba90bf6c90aad16c.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "供水",
-        "化工",
-        "标段"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 30.0
-    },
-    {
-      "title": "项城市城乡供水一体化工程1标段中标结果公告",
-      "region": "河南",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/410000/0104/20260814/0041752dbae2c4494e0184f15a50f82eac51.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "供水",
-        "化工",
-        "标段"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 30.0
-    },
-    {
-      "title": "西华大学校园人行道路综合整治改造项目中标（成交）结果公告",
-      "region": "四川",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/510000/0202/20260814/0051b62c2256a51b49d0b0a21e6f05c9324b.html",
-      "type": "award",
-      "qual": [],
-      "keywords": [
-        "学校",
-        "改造",
-        "整治"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "政府采购",
-      "score": 30.0
-    },
-    {
-      "title": "昆阳线路基换填整治、成昆线路基翻浆冒泥整治工程施工单价承...",
-      "region": "云南",
-      "amount_wan": 0,
-      "publish_date": "",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/530000/0101/20260814/00535217f675cfb046e78d1aa63b0d27f4c5.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "线路",
-        "路基",
-        "整治"
-      ],
-      "score": 30.0
-    },
-    {
-      "title": "云南长水机场北高速公路2026-2027年变配电室及高压...",
-      "region": "云南",
-      "amount_wan": 0,
-      "publish_date": "",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/530000/0104/20260814/00533720c0abf0c940a1878f7d2fa9fd921b.html",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0101/20260815/0044eb1b9118cd1243da8af9b5f6831f1798.html",
       "type": "tender",
       "qual": [],
       "keywords": [
         "公路",
-        "机场",
-        "配电"
+        "扩建",
+        "土建"
       ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
       "score": 30.0
     },
     {
-      "title": "省道S340线五华县洞口至水墩段路面改造工程施工项目招标文件",
+      "title": "沈阳至海口国家高速公路潮州饶平（粤闽界）至汕头龙湖段改扩建工程土建工程施工TJ5招标公告-沈阳至海口国家高速公路潮州饶平（粤闽界）至汕头龙湖段改扩建工程",
       "region": "广东",
       "amount_wan": 0,
-      "publish_date": "2026-08-14",
+      "publish_date": "2026-08-15",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0105/20260814/00447210de07801f41fc82b83a69d8ddedad.html",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0101/20260815/0044e78a5982daa2484e9d2271d88112faa1.html",
       "type": "tender",
       "qual": [],
       "keywords": [
-        "改造",
-        "路面"
+        "公路",
+        "扩建",
+        "土建"
       ],
       "source": "全国公共资源交易平台",
       "biz": "工程建设",
-      "score": 20.0
+      "score": 30.0
     },
     {
-      "title": "隆昌市老城区老旧小区改造提升项目—新华街片区老旧小区改造排危整治工程（监理）中标结果公告",
-      "region": "四川",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/510000/0104/20260814/0051a571873889fa458aa7c5cdf55854417d.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "改造",
-        "整治"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 20.0
-    },
-    {
-      "title": "2026年县道桥梁病害维修工程2026QLWX标段评标结果公示",
-      "region": "江苏",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/320000/0104/20260814/0032980ab3fd39d94be7882a3f9b26185301.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "桥梁",
-        "标段"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 20.0
-    },
-    {
-      "title": "海南省人民医院病房改造项目（设计）项目(海南省人民医院病房改造项目（设计）)中标结果公告",
-      "region": "海南",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/460000/0104/20260814/00466e0fed0588b9437b8e54a14dc9ee8ade.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "医院",
-        "改造"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 20.0
-    },
-    {
-      "title": "茂名电白区（沙琅镇那霍镇）水库移民基础设施提升项目初步设计阶段勘察设计中标结果公示",
+      "title": "沈阳至海口国家高速公路潮州饶平（粤闽界）至汕头龙湖段改扩建工程土建工程施工TJ6招标公告-沈阳至海口国家高速公路潮州饶平（粤闽界）至汕头龙湖段改扩建工程",
       "region": "广东",
       "amount_wan": 0,
-      "publish_date": "2026-08-14",
+      "publish_date": "2026-08-15",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0104/20260814/0044c2e739fd6f3442c5b2d05bbe1182d432.html",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0101/20260815/0044e13075b9fb0243c898ef48155d9266e2.html",
       "type": "tender",
       "qual": [],
       "keywords": [
-        "水库",
-        "基础设施"
+        "公路",
+        "扩建",
+        "土建"
       ],
       "source": "全国公共资源交易平台",
       "biz": "工程建设",
-      "score": 20.0
+      "score": 30.0
     },
     {
-      "title": "昆明市盘龙区老旧小区突出问题整治项目设计采购施工总承包（EPC）招标公告",
-      "region": "云南",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/530000/0101/20260814/00534bf6bed19a87467daf9df1a37296681b.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "EPC",
-        "整治"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 20.0
-    },
-    {
-      "title": "石家庄经济技术开发区松江路综合管网及配套基础设施建设工程施工图设计项目\n中标候选人公示更正",
-      "region": "河北",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/130000/0104/20260814/0013e241c91ccfdd4f95b9cff39221213d1d.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "管网",
-        "基础设施"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 20.0
-    },
-    {
-      "title": "(市交易中心) 未来出行产业园景观绿化工程招标公告",
-      "region": "江苏",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/320000/0101/20260814/0032dce8f7db06f14422bebf89d91d95a67a.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "化工",
-        "绿化"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 20.0
-    },
-    {
-      "title": "武兴二路12号提升改造项目施工一标段评标结果公示",
-      "region": "四川",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/510000/0104/20260814/005136a9ca9e83f241f991f10a16855d373f.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "改造",
-        "标段"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 20.0
-    },
-    {
-      "title": "武兴二路12号提升改造项目监理一标段评标结果公示",
-      "region": "四川",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/510000/0104/20260814/00513c3e7e2a749a4edc817e458d4fb81f7a.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "改造",
-        "标段"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 20.0
-    },
-    {
-      "title": "射洪市瞿河镇全域土地综合整治试点项目（农用地整理一标段）射洪市瞿河镇全域土地综合整治试点项目（农用地整理一标段）-设计-1评标结果公示",
-      "region": "四川",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/510000/0104/20260814/0051a7e0567813b745e994ef8a910337a0db.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "标段",
-        "整治"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 20.0
-    },
-    {
-      "title": "沪昆下行线 K1198+411～+451 普安堂隧道出口新建明洞工程施工总价承包招标中标信息-",
-      "region": "湖南",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/430000/0104/20260814/004475b0308a0b3f492696e7b3befe501947.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "隧道",
-        "新建"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 20.0
-    },
-    {
-      "title": "广东梅州经济开发区北区标准化厂房和配套基础设施建设项目—污水处理厂工程勘察设计项目招标文件",
+      "title": "沈阳至海口国家高速公路潮州饶平（粤闽界）至汕头龙湖段改扩建工程（K2536+195~K2558+853、潮州港支线、澄海支线）土建施工监理及中心试验室试验检测服务JL2招标公告-沈阳至海口国家高速公路潮州饶平（粤闽界）至汕头龙湖段改扩建工程",
       "region": "广东",
       "amount_wan": 0,
-      "publish_date": "2026-08-14",
+      "publish_date": "2026-08-15",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0105/20260814/0044cdc7d2a9c5254138be7f0ba464f5a834.html",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0101/20260815/0044e0d48d0cc4594c02b750a53b6608f491.html",
       "type": "tender",
       "qual": [],
       "keywords": [
-        "污水处理",
-        "基础设施"
+        "公路",
+        "扩建",
+        "土建"
       ],
       "source": "全国公共资源交易平台",
       "biz": "工程建设",
-      "score": 20.0
+      "score": 30.0
     },
     {
-      "title": "内蒙古交通集团有限公司2026年度收费站、服务区房屋修缮工程等4个项目设计施工总承包ZCB标段中标候选人公示",
-      "region": "内蒙古",
+      "title": "沈阳至海口国家高速公路潮州饶平（粤闽界）至汕头龙湖段改扩建工程土建工程施工TJ8招标公告-沈阳至海口国家高速公路潮州饶平（粤闽界）至汕头龙湖段改扩建工程",
+      "region": "广东",
       "amount_wan": 0,
-      "publish_date": "2026-08-14",
+      "publish_date": "2026-08-15",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/150000/0104/20260814/0015132d5d517795446da8d520827431dc8b.html",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0101/20260815/0044bb642ef075ab48f6826566ea88c991b9.html",
       "type": "tender",
       "qual": [],
       "keywords": [
-        "交通",
-        "标段"
+        "公路",
+        "扩建",
+        "土建"
       ],
       "source": "全国公共资源交易平台",
       "biz": "工程建设",
-      "score": 20.0
+      "score": 30.0
     },
     {
-      "title": "秭归县香溪河流域水环境综合治理项目设计、施工、采购工程总承包（EPC）的招标文件",
-      "region": "湖北",
+      "title": "沈阳至海口国家高速公路潮州饶平（粤闽界）至汕头龙湖段改扩建工程（K2536+195~K2558+853、潮州港支线、澄海支线）土建施工监理及中心试验室试验检测服务JS2招标公告-沈阳至海口国家高速公路潮州饶平（粤闽界）至汕头龙湖段改扩建工程",
+      "region": "广东",
       "amount_wan": 0,
-      "publish_date": "2026-08-14",
+      "publish_date": "2026-08-15",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/420000/0105/20260814/0042a88931a198b04097a60b79b9a13e196c.html",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0101/20260815/00449d6e3393d3204f5d92ab7213052003ec.html",
       "type": "tender",
       "qual": [],
       "keywords": [
-        "EPC",
-        "治理"
+        "公路",
+        "扩建",
+        "土建"
       ],
       "source": "全国公共资源交易平台",
       "biz": "工程建设",
-      "score": 20.0
+      "score": 30.0
     },
     {
-      "title": "未来出行产业园景观绿化工程招标文件",
-      "region": "江苏",
+      "title": "沈阳至海口国家高速公路潮州饶平（粤闽界）至汕头龙湖段改扩建工程土建工程施工TJ10招标公告-沈阳至海口国家高速公路潮州饶平（粤闽界）至汕头龙湖段改扩建工程",
+      "region": "广东",
       "amount_wan": 0,
-      "publish_date": "2026-08-14",
+      "publish_date": "2026-08-15",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/320000/0105/20260814/00328ecf1abb850e4e729eb42ceab93e4527.html",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0101/20260815/004491ef89c4e23240729db1c06d77273b3d.html",
       "type": "tender",
       "qual": [],
       "keywords": [
-        "化工",
-        "绿化"
+        "公路",
+        "扩建",
+        "土建"
       ],
       "source": "全国公共资源交易平台",
       "biz": "工程建设",
-      "score": 20.0
+      "score": 30.0
     },
     {
-      "title": "（招标）保山市2015—2017年农村电网中央预算内结余资金项目施甸县35千伏老麦变电站增容改造工程施工.BZBJ",
-      "region": "云南",
+      "title": "沈阳至海口国家高速公路潮州饶平（粤闽界）至汕头龙湖段改扩建工程土建工程施工TJ1招标公告-沈阳至海口国家高速公路潮州饶平（粤闽界）至汕头龙湖段改扩建工程",
+      "region": "广东",
       "amount_wan": 0,
-      "publish_date": "2026-08-14",
+      "publish_date": "2026-08-15",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/530000/0105/20260814/0053c5dcdb09b78f484ab344ecef9f5c1dde.html",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0101/20260815/0044601f7e7079b74a48b197789245d52795.html",
       "type": "tender",
       "qual": [],
       "keywords": [
-        "改造",
+        "公路",
+        "扩建",
+        "土建"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 30.0
+    },
+    {
+      "title": "110千伏石围塘输变电工程（土建分册）配套变电站全过程监理服务招标公告-110kV石围塘输变电工程",
+      "region": "广东",
+      "amount_wan": 0,
+      "publish_date": "2026-08-15",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0101/20260815/00445c83f10a08174c31a62de5ec418bfd93.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "输变电",
+        "土建",
         "变电站"
       ],
       "source": "全国公共资源交易平台",
       "biz": "工程建设",
-      "score": 20.0
+      "score": 30.0
     },
     {
-      "title": "泉山南路棚改片区城市棚户区改造项目A区续建工程（二次）招标公告",
-      "region": "山东",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/370000/0101/20260814/00373d62f582b88746c9b9e3d4c59f7097da.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "棚改",
-        "改造"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 20.0
-    },
-    {
-      "title": "甘洛县应急管理局甘洛县赤普片区非煤矿山区域性隐蔽致灾因素普查项目中标（成交）结果公告",
-      "region": "四川",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/510000/0202/20260814/0051d0dc511e83c643ba88ee1487a481153f.html",
-      "type": "award",
-      "qual": [],
-      "keywords": [
-        "矿山",
-        "煤矿"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "政府采购",
-      "score": 20.0
-    },
-    {
-      "title": "青川县水利局青川县2026-2030年河道采砂规划及2026年度采砂实施方案编制项目中标（成交）结果公告",
-      "region": "四川",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/510000/0202/20260814/00514aca078d1e38499a9ddcca9bce552079.html",
-      "type": "award",
-      "qual": [],
-      "keywords": [
-        "水利",
-        "河道"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "政府采购",
-      "score": 20.0
-    },
-    {
-      "title": "第三中学雨污管网工程成交公告",
-      "region": "河北",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/130000/0202/20260814/0013b71be762f871406a962053d285213579.html",
-      "type": "award",
-      "qual": [],
-      "keywords": [
-        "管网",
-        "雨污"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "政府采购",
-      "score": 20.0
-    },
-    {
-      "title": "Z1309302600182011沧州市孟村回族自治县2026年农村环境整治资金项目生活污水治理工程项目工程造价咨询结果公告",
-      "region": "河北",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/130000/0202/20260814/0013c401854456c648d795b4cfbb966cb2bb.html",
-      "type": "award",
-      "qual": [],
-      "keywords": [
-        "整治",
-        "治理"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "政府采购",
-      "score": 20.0
-    },
-    {
-      "title": "甘洛县应急管理局甘洛县赤普片区非煤矿山区域性隐蔽致灾因素...",
-      "region": "四川",
-      "amount_wan": 0,
-      "publish_date": "",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/510000/0202/20260814/0051d0dc511e83c643ba88ee1487a481153f.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "矿山",
-        "煤矿"
-      ],
-      "score": 20.0
-    },
-    {
-      "title": "吉林大学部分建筑增加火灾自动报警系统工程项目二标段废标公告",
-      "region": "吉林",
-      "amount_wan": 0,
-      "publish_date": "",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ccgp.gov.cn/cggg/zygg/fblbgg/202608/t20260814_27138126.htm",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "建筑",
-        "标段"
-      ],
-      "score": 20.0
-    },
-    {
-      "title": "浑源县顾册区域养老服务中心建设项目(1标段)二次招标文件",
-      "region": "山西",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/140000/0105/20260814/00143df5a1173fc54bc4b5ad7c9ca563d3b3.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "标段"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 10.0
-    },
-    {
-      "title": "乐昌市“诗画田园”阡陌飘香乡村振兴示范带建设项目（五山段）二标段施工招标文件",
+      "title": "沈阳至海口国家高速公路潮州饶平（粤闽界）至汕头龙湖段改扩建工程土建工程施工TJ2招标公告-沈阳至海口国家高速公路潮州饶平（粤闽界）至汕头龙湖段改扩建工程",
       "region": "广东",
       "amount_wan": 0,
-      "publish_date": "2026-08-14",
+      "publish_date": "2026-08-15",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0105/20260814/00447f5706b0851044c39f4d67bc2ccce6a6.html",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0101/20260815/004439362163ce4845e8affb3646c72d6522.html",
       "type": "tender",
       "qual": [],
       "keywords": [
-        "标段"
+        "公路",
+        "扩建",
+        "土建"
       ],
       "source": "全国公共资源交易平台",
       "biz": "工程建设",
-      "score": 10.0
+      "score": 30.0
     },
     {
-      "title": "云南省大理州2026年中央财政国土绿化项目招标公告",
-      "region": "云南",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/530000/0101/20260814/0053fc78a3da1d984d6cba984b99f45d3858.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "绿化"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 10.0
-    },
-    {
-      "title": "云南省保山市2026年中央财政国土绿化项目验收服务招标公告",
-      "region": "云南",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/530000/0101/20260814/0053c19b6a7b6f52434f8c8258ec1a7a6583.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "绿化"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 10.0
-    },
-    {
-      "title": "昌宁县卡斯镇、翁堵镇、温泉镇地质灾害治理项目勘查可研设计招标公告",
-      "region": "云南",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/530000/0101/20260814/0053b5f219ae00804e819fdc1eaf68b7052c.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "治理"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 10.0
-    },
-    {
-      "title": "云南省保山市2026年中央财政国土绿化项目监理服务招标公告",
-      "region": "云南",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/530000/0101/20260814/00538fba36c52a0442aba7c41320934679d3.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "绿化"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 10.0
-    },
-    {
-      "title": "云南省保山市2026年中央财政国土绿化项目全过程跟踪审计服务招标公告",
-      "region": "云南",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/530000/0101/20260814/005303459e41c8f0495c98ed3105239ffbf1.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "绿化"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 10.0
-    },
-    {
-      "title": "乐昌市“诗画田园”阡陌飘香乡村振兴示范带建设项目（五山段）二标段施工招标公告",
+      "title": "天河区车陂涌（广园快速路至大观净水厂段）综合整治工程勘测设计及施工总承包（EPC）招标公告-天河区车陂涌（广园快速路至大观净水厂段）综合整治工程",
       "region": "广东",
       "amount_wan": 0,
-      "publish_date": "2026-08-14",
+      "publish_date": "2026-08-15",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0101/20260814/0044a8a27cabbbd041aba78446e34922326b.html",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0101/20260815/004423ec80e53fa7494398583bfcb7433961.html",
       "type": "tender",
       "qual": [],
       "keywords": [
-        "标段"
+        "EPC",
+        "水厂",
+        "整治"
       ],
       "source": "全国公共资源交易平台",
       "biz": "工程建设",
-      "score": 10.0
+      "score": 30.0
     },
     {
-      "title": "韶关市浈江区大数据产业基础设施工程（一期土石方工程）施工中标结果公示",
+      "title": "沈阳至海口国家高速公路潮州饶平（粤闽界）至汕头龙湖段改扩建工程土建工程施工TJ7招标公告-沈阳至海口国家高速公路潮州饶平（粤闽界）至汕头龙湖段改扩建工程",
       "region": "广东",
       "amount_wan": 0,
-      "publish_date": "2026-08-14",
+      "publish_date": "2026-08-15",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0104/20260814/00443421462905ed44c79eaabce0c4af5486.html",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0101/20260815/004423ac4c3ed0464955a2449c7fae499ccf.html",
       "type": "tender",
       "qual": [],
       "keywords": [
-        "基础设施"
+        "公路",
+        "扩建",
+        "土建"
       ],
       "source": "全国公共资源交易平台",
       "biz": "工程建设",
-      "score": 10.0
+      "score": 30.0
     },
     {
-      "title": "韶关市浈江区大数据产业基础设施工程（一期土石方工程）监理中标结果公示",
+      "title": "沈阳至海口国家高速公路潮州饶平（粤闽界）至汕头龙湖段改扩建工程土建工程施工TJ4招标公告-沈阳至海口国家高速公路潮州饶平（粤闽界）至汕头龙湖段改扩建工程",
       "region": "广东",
       "amount_wan": 0,
-      "publish_date": "2026-08-14",
+      "publish_date": "2026-08-15",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0104/20260814/00442988c771c40949f0accb49bc3cae9114.html",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0101/20260815/004407537763a7ad46d0ae4aae90b9859570.html",
       "type": "tender",
       "qual": [],
       "keywords": [
-        "基础设施"
+        "公路",
+        "扩建",
+        "土建"
       ],
       "source": "全国公共资源交易平台",
       "biz": "工程建设",
-      "score": 10.0
+      "score": 30.0
     },
     {
-      "title": "宇世达保障性住房二期项目1标段设计招标公告",
+      "title": "天津交通职业学院节能与新能源汽车产教融合实训基地项目1标段招标文件",
       "region": "天津",
       "amount_wan": 0,
       "publish_date": "2026-08-14",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/120000/0101/20260814/0012a2f4609dabab4e6fa6ff660b182e5689.html",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/120000/0105/20260814/0012be6aec8d2c264aff8c382730cd5e315a.html",
       "type": "tender",
       "qual": [],
       "keywords": [
+        "交通",
+        "新能源",
         "标段"
       ],
       "source": "全国公共资源交易平台",
       "biz": "工程建设",
-      "score": 10.0
+      "score": 30.0
     },
     {
-      "title": "KCSJ-1标段中标候选人公示第1次",
-      "region": "内蒙古",
+      "title": "“山水藏马”乡村振兴片区基础设施配套项目（施工）不划分标段预中标公示",
+      "region": "山东",
       "amount_wan": 0,
-      "publish_date": "2026-08-14",
+      "publish_date": "2026-08-15",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/150000/0104/20260814/0015a0cae761136043c5b81574fd3aed2d4c.html",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/370000/0104/20260815/00377bd59d76219b4fa9aae3d890d5e05983.html",
       "type": "tender",
       "qual": [],
       "keywords": [
-        "标段"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 10.0
-    },
-    {
-      "title": "KCSJ-2标段中标候选人公示第1次",
-      "region": "内蒙古",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/150000/0104/20260814/0015dcdc6b0d0b5d43559aa72a6bef52282d.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "标段"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 10.0
-    },
-    {
-      "title": "KCSJ-3标段中标候选人公示第1次",
-      "region": "内蒙古",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/150000/0104/20260814/0015cc9e0c58817540558155603d70a1bb60.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "标段"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 10.0
-    },
-    {
-      "title": "招标文件变更澄清（一标段）.pdf",
-      "region": "云南",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/530000/0105/20260814/005313107ff123fe498e8d0fc0c2a43de1c4.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "标段"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 10.0
-    },
-    {
-      "title": "平吉堡肉牛养殖基地配套基础设施项目施工招标公告",
-      "region": "宁夏",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/640000/0101/20260814/0064be8332076e4643a18f718568e6efae19.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
+        "标段",
         "基础设施"
       ],
       "source": "全国公共资源交易平台",
       "biz": "工程建设",
-      "score": 10.0
+      "score": 20.0
     },
     {
-      "title": "G312线山丹拾号村至甘州区上秦村段公路工程施工图勘察设计中标候选人公示",
-      "region": "甘肃",
+      "title": "杭州临江高新技术产业开发区新材料产业园配套污水处理厂及附属设施工程（一期）设备及安装项目中标候选人公示",
+      "region": "浙江",
+      "amount_wan": 0,
+      "publish_date": "2026-08-15",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/330000/0104/20260815/00335a98a82ca53e4230894e9adeb7072fc1.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "污水处理",
+        "安装"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 20.0
+    },
+    {
+      "title": "大荔县2026年农村公路改建工程（原级改造工程）施工招标公告",
+      "region": "陕西",
+      "amount_wan": 0,
+      "publish_date": "2026-08-15",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/610000/0101/20260815/0061dd16d85f356b4fc1a5cbe00d8b694c9b.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "公路",
+        "改造"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 20.0
+    },
+    {
+      "title": "铁路专用线（路子铺段）沿线环境整治提升项目施工中标结果公示",
+      "region": "江苏",
+      "amount_wan": 0,
+      "publish_date": "2026-08-15",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/320000/0104/20260815/0032da49c685487c46e996b107a3b61f9cef.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "铁路",
+        "整治"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 20.0
+    },
+    {
+      "title": "2025年度省级水利发展资金水土保持项目略阳县夹门子生态清洁小流域综合治理工程招标公告",
+      "region": "陕西",
+      "amount_wan": 0,
+      "publish_date": "2026-08-15",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/610000/0101/20260815/0061e4ed8f5e94a04469a15ff9adf9db1d75.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "水利",
+        "治理"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 20.0
+    },
+    {
+      "title": "G30连霍高速陕西段零碳公路运输通道建设项目设计施工总承包（EPC）招标公告",
+      "region": "陕西",
+      "amount_wan": 0,
+      "publish_date": "2026-08-15",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/610000/0101/20260815/0061b8b17a997f524e6181e2ebdee8147130.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "EPC",
+        "公路"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 20.0
+    },
+    {
+      "title": "桥梁声屏障安装工程（第二批）资格预审公告",
+      "region": "陕西",
+      "amount_wan": 0,
+      "publish_date": "2026-08-15",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/610000/0101/20260815/0061ab8273aa4ee5492994ce7e509e67d2de.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "桥梁",
+        "安装"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 20.0
+    },
+    {
+      "title": "天河体育中心周边管网改造工程（天河北路段）施工总承包招标公告-天河体育中心周边管网改造工程",
+      "region": "广东",
+      "amount_wan": 0,
+      "publish_date": "2026-08-15",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0101/20260815/0044bd69c1b560d44df49d90688769ddc47b.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "管网",
+        "改造"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 20.0
+    },
+    {
+      "title": "广州临空经济示范区高端智能装备产业园基础设施及配套建设项目（标段二）室外园林景观工程及非定位路工程施工招标公告-广州临空经济示范区高端智能装备产业园基础设施及配套建设项目",
+      "region": "广东",
+      "amount_wan": 0,
+      "publish_date": "2026-08-15",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0101/20260815/0044b914776fa9de422ea156a67c720ba258.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "标段",
+        "基础设施"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 20.0
+    },
+    {
+      "title": "云浮市云城区燃气设施更新改造工程项目勘察和初步设计中标候选人公示",
+      "region": "广东",
+      "amount_wan": 0,
+      "publish_date": "2026-08-15",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0104/20260815/0044719bbca50fe044198145c2f60137c732.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "燃气",
+        "改造"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 20.0
+    },
+    {
+      "title": "天河区车陂涌(广园快速路至大观净水厂段)综合整治工程监理招标公告-天河区车陂涌（广园快速路至大观净水厂段）综合整治工程",
+      "region": "广东",
+      "amount_wan": 0,
+      "publish_date": "2026-08-15",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0101/20260815/00443d342967d7d647df80af5635c6521af9.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "水厂",
+        "整治"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 20.0
+    },
+    {
+      "title": "济南市综合保税区物流流通基础设施提升改造项目施工总承包济南市综合保税区物流流通基础设施提升改造项目施工总承包中标候选人公示",
+      "region": "山东",
+      "amount_wan": 0,
+      "publish_date": "2026-08-15",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/370000/0104/20260815/0037883b846687394a50a6cda906bff1a731.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "改造",
+        "基础设施"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 20.0
+    },
+    {
+      "title": "山西省乡宁县昌宁镇炭峪西路崩塌地质灾害治理项目(1标段)中标结果公示",
+      "region": "山西",
+      "amount_wan": 0,
+      "publish_date": "2026-08-15",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/140000/0104/20260815/0014ed8d41166c8e49b3ac64710c0f4106e5.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "标段",
+        "治理"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 20.0
+    },
+    {
+      "title": "永和县城乡供水一体化(二期)工程(2标段)中标结果公示",
+      "region": "山西",
+      "amount_wan": 0,
+      "publish_date": "2026-08-15",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/140000/0104/20260815/0014e5abbbcdfbdc46dca87310dd39ed5686.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "供水",
+        "标段"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 20.0
+    },
+    {
+      "title": "山西省乡宁县昌宁镇炭峪西路崩塌地质灾害治理项目(2标段)中标结果公示",
+      "region": "山西",
+      "amount_wan": 0,
+      "publish_date": "2026-08-15",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/140000/0104/20260815/0014bcbd665dae93441eb2c7966817c9106f.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "标段",
+        "治理"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 20.0
+    },
+    {
+      "title": "永和县城乡供水一体化(二期)工程(1标段)中标结果公示",
+      "region": "山西",
+      "amount_wan": 0,
+      "publish_date": "2026-08-15",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/140000/0104/20260815/001466bc944072824007ab2951ebf2f41cbc.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "供水",
+        "标段"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 20.0
+    },
+    {
+      "title": "安新县刘李庄小学场地改造及辛庄小学校园面貌提升改造项目施工中标结果公示",
+      "region": "河北",
+      "amount_wan": 0,
+      "publish_date": "2026-08-15",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/130000/0104/20260815/00137e252480d142468798492dd3e0027dcd.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "学校",
+        "改造"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 20.0
+    },
+    {
+      "title": "安阳市北关区灯塔路街道办事处电业局等14个老旧小区改造配套基础设施项目(2025年小区红线内)施工招标公告",
+      "region": "河南",
       "amount_wan": 0,
       "publish_date": "2026-08-14",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/620000/0104/20260814/006273914456da304e21bc7f8dcc03d65cdd.html",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/410000/0101/20260814/00416dfd7cdb93c7438eaf5d3d03e1ffad3f.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "改造",
+        "基础设施"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 20.0
+    },
+    {
+      "title": "安阳市北关区豆腐营街道办事处富惠一村等7个老旧小区改造配套基础设施项目（2025年小区红线内）施工招标公告",
+      "region": "河南",
+      "amount_wan": 0,
+      "publish_date": "2026-08-14",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/410000/0101/20260814/004153c2eca6615a4f26982d83ca8a06ba00.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "改造",
+        "基础设施"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 20.0
+    },
+    {
+      "title": "安阳市北关区洹北街道办事处棉麻厂家属院等13个老旧小区改造配套基础设施项目（2025年小区红线内）施工招标公告",
+      "region": "河南",
+      "amount_wan": 0,
+      "publish_date": "2026-08-14",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/410000/0101/20260814/00418c9380faa6f149f9865297fa3f983143.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "改造",
+        "基础设施"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 20.0
+    },
+    {
+      "title": "勉县大地窝生态清洁小流域水土保持综合治理工程招标公告",
+      "region": "陕西",
+      "amount_wan": 0,
+      "publish_date": "2026-08-15",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/610000/0101/20260815/0061b1b896d3bdc747c989eac1095aaadab2.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "治理"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 10.0
+    },
+    {
+      "title": "天津城建大学2026年校舍综合维修项目1标段评标结果公示",
+      "region": "天津",
+      "amount_wan": 0,
+      "publish_date": "2026-08-15",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/120000/0104/20260815/00128645d40a148a431a882be30ea76b3750.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "标段"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 10.0
+    },
+    {
+      "title": "临汾市尧都区刘淹线西道至淹底腰段改造工程施工中标候选人公示",
+      "region": "山西",
+      "amount_wan": 0,
+      "publish_date": "2026-08-15",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/140000/0104/20260815/0014ab34766567c7415587a5caead0a9bfc8.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "改造"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 10.0
+    },
+    {
+      "title": "游仙区人民医院服务能力提升建设项目施工中标结果公告",
+      "region": "四川",
+      "amount_wan": 0,
+      "publish_date": "2026-08-15",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/510000/0104/20260815/0051ea0e3b7c6cd4434c81b6621a4f33b21f.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "医院"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 10.0
+    },
+    {
+      "title": "四川省凯江安州区防洪治理工程监理(第二次)中标结果公告",
+      "region": "四川",
+      "amount_wan": 0,
+      "publish_date": "2026-08-15",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/510000/0104/20260815/00512a10d90bc73a46828d5d01287be5939c.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "治理"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 10.0
+    },
+    {
+      "title": "游仙区人民医院服务能力提升建设项目监理中标结果公告",
+      "region": "四川",
+      "amount_wan": 0,
+      "publish_date": "2026-08-15",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/510000/0104/20260815/005189fed75b5d3a4a9b899a4d21ddfc66f0.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "医院"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 10.0
+    },
+    {
+      "title": "陕西交控运营管理公司绥定分公司交安设施提升、护栏防腐刷漆、标线优化工程施工招标公告",
+      "region": "陕西",
+      "amount_wan": 0,
+      "publish_date": "2026-08-15",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/610000/0101/20260815/0061d4495938cd8a4906ba94ac7a056d3c44.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "化工"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 10.0
+    },
+    {
+      "title": "汉中市汉台区黄营至张码头公路改建工程招标公告",
+      "region": "陕西",
+      "amount_wan": 0,
+      "publish_date": "2026-08-15",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/610000/0101/20260815/0061990cdfa15e6b408492ed9daf66df2deb.html",
       "type": "tender",
       "qual": [],
       "keywords": [
@@ -1496,285 +1256,13 @@
       "score": 10.0
     },
     {
-      "title": "土左旗Y404线K1+227朱尔沟一号桥危桥改造工程及土左旗Y403线K3+836苏盖营桥危桥改造工程施工中标候选人公示第1次",
-      "region": "内蒙古",
+      "title": "咸阳高新区科技一路（汉武大道-文景大道）市政工程中标候选人公示",
+      "region": "陕西",
       "amount_wan": 0,
-      "publish_date": "2026-08-14",
+      "publish_date": "2026-08-15",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/150000/0104/20260814/00153f9cdbbc2720475b969e6da2d1782e72.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "改造"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 10.0
-    },
-    {
-      "title": "内蒙航天动力机械测试所综合管沟改造工程 （北区）中标候选人公示第1次",
-      "region": "内蒙古",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/150000/0104/20260814/0015fe7c85eeab984a74bf444befbab8d755.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "改造"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 10.0
-    },
-    {
-      "title": "临洮县2026年高标准农田高效节水灌溉建设项目（太石镇、中铺镇片区）施工二标段招标文件",
-      "region": "甘肃",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/620000/0105/20260814/0062a00fee31b0fc4bb49cd21bd7192632b0.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "标段"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 10.0
-    },
-    {
-      "title": "临洮县2026年高标准农田高效节水灌溉建设项目（太石镇、中铺镇片区）施工一标段招标文件",
-      "region": "甘肃",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/620000/0105/20260814/006282756c9285c747cf90ad665f30f25a31.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "标段"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 10.0
-    },
-    {
-      "title": "临洮县2026年高标准农田高效节水灌溉建设项目（太石镇、中铺镇片区）有机肥采购标段招标文件",
-      "region": "甘肃",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/620000/0105/20260814/006250dd91dfe8084f13b6e5071925095939.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "标段"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 10.0
-    },
-    {
-      "title": "临洮县2026年高标准农田高效节水灌溉建设项目（太石镇、中铺镇片区）监理标段招标文件",
-      "region": "甘肃",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/620000/0105/20260814/00623c756101accc403d884c4d684fc4247c.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "标段"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 10.0
-    },
-    {
-      "title": "（补充通知）东莞市东城街道新世纪豪园老旧小区改造项目补充通知公告",
-      "region": "广东",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0101/20260814/004487722bd18e8d45388a91766f1152b818.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "改造"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 10.0
-    },
-    {
-      "title": "芯动力科技城项目设计施工总承包（标段四）中标信息-芯动力科技城项目",
-      "region": "广东",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0104/20260814/004473c32ff9dfc8499198b65bdb4c7dfe0f.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "标段"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 10.0
-    },
-    {
-      "title": "马厂坝TOD综合开发（二期）项目A地块特殊消防设计咨询及实体试验技术服务（入围评审阶段）评标结果公示",
-      "region": "四川",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/510000/0104/20260814/0051bd401330adbd422b957aa627f1b9dfdd.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "消防"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 10.0
-    },
-    {
-      "title": "广州市黄埔区新龙镇镇龙村(西片区)城中村改造项目(新联片区)复建03地块工程检测监测服务中标信息-广州市黄埔区新龙镇镇龙村（西片区）城中村改造项目（新联片区）复建03地块工程",
-      "region": "广东",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0104/20260814/00449e22445445504592aedde01dcedda85d.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "改造"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 10.0
-    },
-    {
-      "title": "同心县下马关镇南关村设施温棚建设项目（三期）一标段中标候选人公示",
-      "region": "宁夏",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/640000/0104/20260814/0064c64e3e42d61d4511bf6e686e26bd8a28.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "标段"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 10.0
-    },
-    {
-      "title": "溧城街道城中村、散住楼消防通道建设工程招标文件",
-      "region": "江苏",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/320000/0105/20260814/00329494dfce207d4ea4be609c6b4e11c93a.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "消防"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 10.0
-    },
-    {
-      "title": "鄂尔多斯应用技术学院航空实训中心建设项目施工标段中标候选人公示（评定分离）",
-      "region": "内蒙古",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/150000/0104/20260814/00150a60c8c79e9f4f81b3040ce2626cae9d.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "标段"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 10.0
-    },
-    {
-      "title": "西夏区2026年住宅老旧电梯更新改造项目招标公告",
-      "region": "宁夏",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/640000/0101/20260814/00640d20ee37552540ab91cb2471abf43c83.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "改造"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 10.0
-    },
-    {
-      "title": "广东省惠州市中韩产业园新圩人工智能产业片区基础设施建设项目-长布一地块项目（施工总承包）【施工】招标公告",
-      "region": "广东",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0101/20260814/0044a832b25870eb45969f59e5f535488283.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "基础设施"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 10.0
-    },
-    {
-      "title": "杭埠河航道综合开发工程前期工作及勘察设计中标候选人公示",
-      "region": "安徽",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/340000/0104/20260814/0034e3a503a740d947ba8a479eca1e7ecbb1.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "航道"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "工程建设",
-      "score": 10.0
-    },
-    {
-      "title": "知识城人才五路东延线市政道路及配套工程勘察设计中标信息-知识城人才五路东延线市政道路及配套工程",
-      "region": "广东",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0104/20260814/0044721136e0dc8d481687eeca1c605a51d9.html",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/610000/0104/20260815/0061791e941237f54f359f39d8bca445ffcd.html",
       "type": "tender",
       "qual": [],
       "keywords": [
@@ -1785,267 +1273,383 @@
       "score": 10.0
     },
     {
-      "title": "绵阳市涪城区工区街道办事处绵阳市涪城区平政河老旧街区改造项目监理服务项目中标（成交）结果公告",
-      "region": "四川",
+      "title": "桥梁护栏防护加固工程(第二批)资格预审公告",
+      "region": "陕西",
       "amount_wan": 0,
-      "publish_date": "2026-08-14",
+      "publish_date": "2026-08-15",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/510000/0202/20260814/005160b7ab94f04b4f179f31025a36e7e096.html",
-      "type": "award",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/610000/0101/20260815/00617829431297194fa98ab92a2a6e5643a6.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "桥梁"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 10.0
+    },
+    {
+      "title": "双柏县2026年30户以上自然村通硬化路工程（铺司至法甸、龙树窝至当归山、雨法公路至大地村道路）招标公告",
+      "region": "云南",
+      "amount_wan": 0,
+      "publish_date": "2026-08-15",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/530000/0101/20260815/0053abf2fc9f6da44eec93805f72486c1ca5.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "公路"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 10.0
+    },
+    {
+      "title": "汕头港广澳港区三期工程一阶段施工第七标段（突堤码头南侧港池炸礁、疏浚及吹填工程）招标公告-汕头港广澳港区三期工程",
+      "region": "广东",
+      "amount_wan": 0,
+      "publish_date": "2026-08-15",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0101/20260815/0044f42fe83b8b65443a9475dbe08bf233ff.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "标段"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 10.0
+    },
+    {
+      "title": "白鹤洞街鹤洞片区宜居改造工程项目勘察、设计服务补充公告-白鹤洞街鹤洞片区宜居改造工程项目",
+      "region": "广东",
+      "amount_wan": 0,
+      "publish_date": "2026-08-15",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0101/20260815/0044f27745f8e77b4bb093ba62b02e53802b.html",
+      "type": "tender",
       "qual": [],
       "keywords": [
         "改造"
       ],
       "source": "全国公共资源交易平台",
-      "biz": "政府采购",
+      "biz": "工程建设",
       "score": 10.0
     },
     {
-      "title": "Z1306252600442301徐水区6家管道燃气经营企业财务审计项目结果公告",
-      "region": "河北",
+      "title": "梦想路拓宽改造工程勘察及初步设计招标公告-梦想路拓宽改造工程",
+      "region": "广东",
       "amount_wan": 0,
-      "publish_date": "2026-08-14",
+      "publish_date": "2026-08-15",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/130000/0202/20260814/00134b38db8689d14c44887577c61021d207.html",
-      "type": "award",
-      "qual": [],
-      "keywords": [
-        "燃气"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "政府采购",
-      "score": 10.0
-    },
-    {
-      "title": "越西县越城镇西城中学越西县2025年中小学校学生课桌椅采购项目中标（成交）结果公告",
-      "region": "四川",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/510000/0202/20260814/005170ca2a2dcd9843279bafddf94b815016.html",
-      "type": "award",
-      "qual": [],
-      "keywords": [
-        "学校"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "政府采购",
-      "score": 10.0
-    },
-    {
-      "title": "四川省武胜县中医医院武胜县中医医院中药饮片大包装、小包装、最细粉配送服务采购项目(二次)中标（成交）结果公告",
-      "region": "四川",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/510000/0202/20260814/005187db704367714015b058ad9035da1f6f.html",
-      "type": "award",
-      "qual": [],
-      "keywords": [
-        "医院"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "政府采购",
-      "score": 10.0
-    },
-    {
-      "title": "和政县人民医院医疗设备维修与保养项目中标结果公示",
-      "region": "甘肃",
-      "amount_wan": 0,
-      "publish_date": "2026-08-14",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/620000/0202/20260814/0062c9700f4525f44c31af76ec16fcca6a60.html",
-      "type": "award",
-      "qual": [],
-      "keywords": [
-        "医院"
-      ],
-      "source": "全国公共资源交易平台",
-      "biz": "政府采购",
-      "score": 10.0
-    },
-    {
-      "title": "云南省大理州2026年中央财政国土绿化项目招标公告",
-      "region": "云南",
-      "amount_wan": 0,
-      "publish_date": "",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/530000/0101/20260814/0053fc78a3da1d984d6cba984b99f45d3858.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "绿化"
-      ],
-      "score": 10.0
-    },
-    {
-      "title": "云南省保山市2026年中央财政国土绿化项目验收服务招标公...",
-      "region": "云南",
-      "amount_wan": 0,
-      "publish_date": "",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/530000/0101/20260814/0053c19b6a7b6f52434f8c8258ec1a7a6583.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "绿化"
-      ],
-      "score": 10.0
-    },
-    {
-      "title": "昌宁县卡斯镇、翁堵镇、温泉镇地质灾害治理项目勘查可研设计...",
-      "region": "云南",
-      "amount_wan": 0,
-      "publish_date": "",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/530000/0101/20260814/0053b5f219ae00804e819fdc1eaf68b7052c.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "治理"
-      ],
-      "score": 10.0
-    },
-    {
-      "title": "云南省保山市2026年中央财政国土绿化项目监理服务招标公...",
-      "region": "云南",
-      "amount_wan": 0,
-      "publish_date": "",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/530000/0101/20260814/00538fba36c52a0442aba7c41320934679d3.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "绿化"
-      ],
-      "score": 10.0
-    },
-    {
-      "title": "云南保山电力股份有限公司腾冲分公司2026年生产投资计划...",
-      "region": "云南",
-      "amount_wan": 0,
-      "publish_date": "",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ggzy.gov.cn/information/deal/html/a/530000/0101/20260814/00536ad5e3798d0b41ffa2b0399ac9815d52.html",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "电力"
-      ],
-      "score": 10.0
-    },
-    {
-      "title": "中国科学院微小卫星创新研究院CL02卫星太赫兹通信数传试验载荷采购项目中标公告",
-      "region": "",
-      "amount_wan": 0,
-      "publish_date": "",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ccgp.gov.cn/cggg/zygg/zbgg/202608/t20260814_27138076.htm",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "通信"
-      ],
-      "score": 10.0
-    },
-    {
-      "title": "盈江县新城乡红山村2025年地质灾害避险搬迁集中安置点建设项目（一期）成交结果公告",
-      "region": "",
-      "amount_wan": 0,
-      "publish_date": "",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ccgp.gov.cn/cggg/dfgg/cjgg/202608/t20260814_27138343.htm",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "搬迁"
-      ],
-      "score": 10.0
-    },
-    {
-      "title": "乌恰县黑孜苇乡康什维尔村养殖繁育基地提升改造及牲畜采购项目公开招标公告",
-      "region": "",
-      "amount_wan": 0,
-      "publish_date": "",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ccgp.gov.cn/cggg/dfgg/gkzb/202608/t20260814_27138340.htm",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0101/20260815/0044efec4c8e8594445ab27e466175a1b950.html",
       "type": "tender",
       "qual": [],
       "keywords": [
         "改造"
       ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
       "score": 10.0
     },
     {
-      "title": "万邦工程管理咨询有限公司关于广景弄6号办公楼办公场所改造及整修项目的竞争性磋商公告",
-      "region": "",
+      "title": "天河区长湴村城中村改造项目汽配城地块（CB4、CB5、CB6）排水管线迁改工程施工图设计及施工总承包招标公告-天河区长湴村城中村改造项目汽配城地块排水管线迁改工程",
+      "region": "广东",
       "amount_wan": 0,
-      "publish_date": "",
+      "publish_date": "2026-08-15",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ccgp.gov.cn/cggg/dfgg/jzxcs/202608/t20260814_27138337.htm",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0101/20260815/0044d8c44856f2114737bc4e7a88f84d9816.html",
       "type": "tender",
       "qual": [],
       "keywords": [
         "改造"
       ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
       "score": 10.0
     },
     {
-      "title": "广西建澜项目管理有限公司关于继续教育学院搬迁装修项目（GXZC2026-C2-002354-GXJL）成交结果...",
-      "region": "广西",
+      "title": "广州港南沙港务有限公司10台41t-37m自动化轨道式集装箱门式起重机购置项目（第二次）招标公告-购置10台41吨自动化轨道吊及堆场自动化系统改造建设项目（南沙一期自动化轨道吊购置）",
+      "region": "广东",
       "amount_wan": 0,
-      "publish_date": "",
+      "publish_date": "2026-08-15",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ccgp.gov.cn/cggg/dfgg/cjgg/202608/t20260814_27138332.htm",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0101/20260815/0044c169fa62eeba4e5fbcece65128ff6edc.html",
       "type": "tender",
       "qual": [],
       "keywords": [
-        "搬迁"
+        "改造"
       ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
       "score": 10.0
     },
     {
-      "title": "清城区横荷街泰洋湖工业园区产业大道沿线综合整治提升工程竞争性磋商公告",
-      "region": "",
+      "title": "广州市天河区“百千万工程”石牌街道村改居社区整治提升工程勘察设计采购施工总承包招标公告-广州市天河区“百千万工程”石牌街道村改居社区整治提升工程",
+      "region": "广东",
       "amount_wan": 0,
-      "publish_date": "",
+      "publish_date": "2026-08-15",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ccgp.gov.cn/cggg/dfgg/jzxcs/202608/t20260814_27138330.htm",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0101/20260815/0044b03cd6bfdc3a4c179798bcd1f970fc70.html",
       "type": "tender",
       "qual": [],
       "keywords": [
         "整治"
       ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
       "score": 10.0
     },
     {
-      "title": "广西冠业工程咨询有限公司关于北流市妇幼保健院污水处理站扩容项目的竞争性磋商公告",
-      "region": "广西",
+      "title": "中新镇配套基础设施建设项目招标公告-中新镇配套基础设施建设项目",
+      "region": "广东",
+      "amount_wan": 0,
+      "publish_date": "2026-08-15",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0101/20260815/00449d22c2a7315e41efa3d3af967ae19232.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "基础设施"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 10.0
+    },
+    {
+      "title": "广州市天河区“百千万工程”石牌街道村改居社区整治提升工程监理招标公告-广州市天河区“百千万工程”石牌街道村改居社区整治提升工程",
+      "region": "广东",
+      "amount_wan": 0,
+      "publish_date": "2026-08-15",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0101/20260815/00448e92670d4eeb4081b9f3431bc461829a.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "整治"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 10.0
+    },
+    {
+      "title": "沙河涌排涝泵站工程施工总承包招标公告-沙河涌排涝泵站工程",
+      "region": "广东",
+      "amount_wan": 0,
+      "publish_date": "2026-08-15",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0101/20260815/004474b921036d9d4bd4b994d936f5ddf462.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "泵站"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 10.0
+    },
+    {
+      "title": "广州市天河区“百千万工程”沙东街道村改居社区整治提升工程施工总承包招标公告-广州市天河区“百千万工程”沙东街道村改居社区整治提升工程",
+      "region": "广东",
+      "amount_wan": 0,
+      "publish_date": "2026-08-15",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0101/20260815/00446bc7c5aff3ae4387818df07db0664e6b.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "整治"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 10.0
+    },
+    {
+      "title": "迎宾大道东延线项目（第二标段）施工监理招标公告-迎宾大道东延线项目",
+      "region": "广东",
+      "amount_wan": 0,
+      "publish_date": "2026-08-15",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0101/20260815/004455ed2c089e394296abfafffda1591296.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "标段"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 10.0
+    },
+    {
+      "title": "迎宾大道东延线项目（第二标段）施工总承包招标公告-迎宾大道东延线项目",
+      "region": "广东",
+      "amount_wan": 0,
+      "publish_date": "2026-08-15",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0101/20260815/00442b21c09f82df406db315442e2ffc4ec9.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "标段"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 10.0
+    },
+    {
+      "title": "园博园水之门东南地块建设项目二期（8#、9#、10#、11#、12#、13#、14#、28#、29#、39#、40#、地下车库二标段）监理园博园水之门东南地块建设项目二期（8#、9#、10#、11#、12#、13#、14#、28#、29#、39#、40#、地下车库二标段）监理中标候选人公示",
+      "region": "山东",
+      "amount_wan": 0,
+      "publish_date": "2026-08-15",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/370000/0104/20260815/0037404f6e0661e544618dad92dbeae608ee.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "标段"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 10.0
+    },
+    {
+      "title": "银昌路、崤山东路排水防涝改造项目招标公告",
+      "region": "河南",
+      "amount_wan": 0,
+      "publish_date": "2026-08-14",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/410000/0101/20260814/00417973a8c6bbf54023b5ba32d4552aa593.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "改造"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 10.0
+    },
+    {
+      "title": "太平社区“祠后”厂房改造提升项目施工招标文件",
+      "region": "广东",
+      "amount_wan": 0,
+      "publish_date": "2026-08-14",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0105/20260814/0044c676415904b44f24ba7f31b614a590b9.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "改造"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 10.0
+    },
+    {
+      "title": "太平社区“祠后”厂房改造提升项目施工招标公告",
+      "region": "广东",
+      "amount_wan": 0,
+      "publish_date": "2026-08-14",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ggzy.gov.cn/information/deal/html/a/440000/0101/20260814/00444dd7f93d733a411e8e3442157370874c.html",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "改造"
+      ],
+      "source": "全国公共资源交易平台",
+      "biz": "工程建设",
+      "score": 10.0
+    },
+    {
+      "title": "哈尔滨工业大学科学园综合服务楼A栋暖廊配套换热站改造工程竞争性磋商公告",
+      "region": "黑龙江",
       "amount_wan": 0,
       "publish_date": "",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ccgp.gov.cn/cggg/dfgg/jzxcs/202608/t20260814_27138325.htm",
+      "url": "https://www.ccgp.gov.cn/cggg/zygg/jzxcs/202608/t20260816_27142112.htm",
       "type": "tender",
       "qual": [],
       "keywords": [
-        "污水处理"
+        "改造"
+      ],
+      "score": 10.0
+    },
+    {
+      "title": "昌吉市消防救援大队购买厨师及物业服务项目（二次）竞争性磋商公告",
+      "region": "",
+      "amount_wan": 0,
+      "publish_date": "",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ccgp.gov.cn/cggg/zygg/jzxcs/202608/t20260816_27142085.htm",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "消防"
+      ],
+      "score": 10.0
+    },
+    {
+      "title": "中华人民共和国西藏出入境边防检查总站阿里边境管理支队2026年度维修改造项目成交公告",
+      "region": "西藏",
+      "amount_wan": 0,
+      "publish_date": "",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ccgp.gov.cn/cggg/zygg/cjgg/202608/t20260816_27142082.htm",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "改造"
+      ],
+      "score": 10.0
+    },
+    {
+      "title": "榆林市市政公用服务中心祥和家园小区排水排污工程项目竞争性磋商公告",
+      "region": "",
+      "amount_wan": 0,
+      "publish_date": "",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ccgp.gov.cn/cggg/dfgg/jzxcs/202608/t20260816_27142145.htm",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "市政"
+      ],
+      "score": 10.0
+    },
+    {
+      "title": "榆佳工业园区环城路路面工程一期项目监理竞争性磋商公告",
+      "region": "",
+      "amount_wan": 0,
+      "publish_date": "",
+      "buyer": "",
+      "contact": "",
+      "url": "https://www.ccgp.gov.cn/cggg/dfgg/jzxcs/202608/t20260816_27142144.htm",
+      "type": "tender",
+      "qual": [],
+      "keywords": [
+        "路面"
       ],
       "score": 10.0
     }
