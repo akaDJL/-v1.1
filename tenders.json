@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-08-16T21:38:08.783473",
+  "updated_at": "2026-08-16T22:04:01.052447",
   "is_live_snapshot": true,
-  "count": 37,
-  "real_count": 17,
+  "count": 34,
+  "real_count": 14,
   "items": [
     {
       "title": "太原市某三甲医院新院区建设工程EPC总承包招标",
@@ -540,22 +540,6 @@
       "score": 20.0
     },
     {
-      "title": "嫩江市发展和改革局嫩江市大中型水库移民后期扶持光伏产业三期-储能设备项目竞争性谈判公告",
-      "region": "",
-      "amount_wan": 0,
-      "publish_date": "",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ccgp.gov.cn/cggg/dfgg/jzxtpgg/202608/t20260816_27142160.htm",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "水库",
-        "光伏"
-      ],
-      "score": 20.0
-    },
-    {
       "title": "江西省机电设备招标有限公司公司关于江西应用工程职业学院家...",
       "region": "江西",
       "amount_wan": 0,
@@ -691,43 +675,13 @@
       "score": 10.0
     },
     {
-      "title": "西安旅游职业中等专业学校学生创业实践中心项目竞争性谈判公告",
-      "region": "陕西",
-      "amount_wan": 0,
-      "publish_date": "",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ccgp.gov.cn/cggg/dfgg/jzxtpgg/202608/t20260816_27142164.htm",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "学校"
-      ],
-      "score": 10.0
-    },
-    {
-      "title": "2026年襄城区困难重度残疾人家庭无障碍改造公告",
+      "title": "三原县西阳镇人民政府西阳镇五泉村户厕改造项目中标（成交）结果公告",
       "region": "",
       "amount_wan": 0,
       "publish_date": "",
       "buyer": "",
       "contact": "",
-      "url": "https://www.ccgp.gov.cn/cggg/dfgg/jzxcs/202608/t20260816_27142159.htm",
-      "type": "tender",
-      "qual": [],
-      "keywords": [
-        "改造"
-      ],
-      "score": 10.0
-    },
-    {
-      "title": "关于武汉市东西湖区常青花园社区管理办公室常青花园“三微”改造项目竞争性磋商更正公告",
-      "region": "湖北",
-      "amount_wan": 0,
-      "publish_date": "",
-      "buyer": "",
-      "contact": "",
-      "url": "https://www.ccgp.gov.cn/cggg/dfgg/gzgg/202608/t20260816_27142157.htm",
+      "url": "https://www.ccgp.gov.cn/cggg/dfgg/cjgg/202608/t20260816_27142180.htm",
       "type": "tender",
       "qual": [],
       "keywords": [
