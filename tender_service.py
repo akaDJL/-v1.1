@@ -28,6 +28,8 @@ import json
 import re
 import os
 import time
+# 无头浏览器(Playwright)内核固定在 D 盘，避免占用 C 盘空间；可被环境变量覆盖
+os.environ.setdefault("PLAYWRIGHT_BROWSERS_PATH", "D:/WorkBuddy/ms-playwright")
 import urllib.request
 import urllib.parse
 import urllib.error
@@ -211,9 +213,43 @@ def _is_goods_noise(title):
 ENGINEER_KW = ["工程", "施工", "总承包", "EPC", "标段", "监理", "勘查", "安装", "改造"]
 
 
+# 城市名 → 省份（补充识别 CCGP 等不带省码的标题）
+CITY2PROV = {
+    "哈尔滨": "黑龙江", "长春": "吉林", "沈阳": "辽宁", "大连": "辽宁",
+    "石家庄": "河北", "唐山": "河北", "保定": "河北", "邯郸": "河北", "邢台": "河北", "柏乡": "河北",
+    "太原": "山西", "大同": "山西", "长治": "山西", "阳泉": "山西", "吕梁": "山西",
+    "晋城": "山西", "晋中": "山西", "运城": "山西", "临汾": "山西", "忻州": "山西",
+    "济南": "山东", "青岛": "山东", "烟台": "山东", "潍坊": "山东", "临沂": "山东", "淄博": "山东",
+    "郑州": "河南", "开封": "河南", "洛阳": "河南", "南阳": "河南",
+    "南京": "江苏", "苏州": "江苏", "无锡": "江苏", "徐州": "江苏", "常州": "江苏",
+    "杭州": "浙江", "宁波": "浙江", "温州": "浙江", "嘉兴": "浙江", "绍兴": "浙江",
+    "合肥": "安徽", "芜湖": "安徽", "蚌埠": "安徽",
+    "福州": "福建", "厦门": "福建", "泉州": "福建", "漳州": "福建",
+    "南昌": "江西", "抚州": "江西", "赣州": "江西", "九江": "江西",
+    "武汉": "湖北", "宜昌": "湖北", "襄阳": "湖北", "荆州": "湖北",
+    "长沙": "湖南", "株洲": "湖南", "衡阳": "湖南",
+    "广州": "广东", "深圳": "广东", "珠海": "广东", "佛山": "广东", "东莞": "广东",
+    "海口": "海南", "三亚": "海南",
+    "成都": "四川", "绵阳": "四川", "德阳": "四川", "宜宾": "四川",
+    "贵阳": "贵州", "遵义": "贵州",
+    "昆明": "云南", "曲靖": "云南", "大理": "云南",
+    "西安": "陕西", "商洛": "陕西", "咸阳": "陕西", "宝鸡": "陕西", "渭南": "陕西",
+    "兰州": "甘肃", "天水": "甘肃",
+    "西宁": "青海", "海东": "青海",
+    "银川": "宁夏", "乌鲁木齐": "新疆", "克拉玛依": "新疆",
+    "呼和浩特": "内蒙古", "包头": "内蒙古",
+    "南宁": "广西", "柳州": "广西", "桂林": "广西",
+    "拉萨": "西藏",
+    "乌拉特": "内蒙古", "杨凌": "陕西", "佳木斯": "黑龙江", "徐汇": "上海", "达州": "四川",
+}
+
 def _detect_region(text):
+    t = text or ""
     for p in PROVINCES:
-        if p in (text or ""):
+        if p in t:
+            return p
+    for c, p in CITY2PROV.items():
+        if c in t:
             return p
     return ""
 
@@ -309,6 +345,475 @@ class ShanxiTenderSource(GenericListSource):
         ctx = _SSL_IGNORE if url.startswith("https") else None
         with urllib.request.urlopen(req, timeout=TIMEOUT, context=ctx) as resp:
             return resp.read().decode("utf-8", "ignore")
+
+
+class ShanxiGcSource(BaseSource):
+    """山西省公共资源交易平台 · 工程建设深度源（纯 HTTP，零第三方依赖）。
+    列表页服务端渲染，分页规则 index.jhtml / index_N.jhtml（每页 10 条，倒序最新在前）。
+    工程建设招标公告 jyxxgczb/ 、中标公示 jyxxgcgs/ 分栏目爬取，按 60 天窗口截断。"""
+    BASE = "http://prec.sxzwfw.gov.cn"
+    SECTIONS = [("jyxxgczb", "tender"), ("jyxxgcgs", "award")]
+    MAX_PAGES = 25
+    WINDOW_DAYS = 45
+    PAGE_DELAY = 0.25
+
+    def _get(self, url):
+        req = urllib.request.Request(url, headers={"User-Agent": _random_ua(), "Accept-Language": "zh-CN,zh;q=0.9"})
+        with urllib.request.urlopen(req, timeout=TIMEOUT, context=_SSL_IGNORE) as resp:
+            return resp.read().decode("utf-8", "ignore")
+
+    def _parse(self, html, typ, prefix):
+        out = []
+        pat = re.compile(
+            r'<a[^>]*href="([^"]*%s/\d+\.jhtml)"[^>]*>(.*?)</a>' % prefix, re.S)
+        for m in pat.finditer(html):
+            url = m.group(1).replace(":80", "")
+            if url.startswith("/"):
+                url = self.BASE + url
+            blk = m.group(2)
+            tm = re.search(r'cs_bz_cont">\s*(.*?)\s*</p>', blk, re.S)
+            title = re.sub(r"\s+", "", tm.group(1)) if tm else ""
+            if not title or len(title) < 6:
+                continue
+            kws = _kw(title)
+            if not kws or _is_goods_noise(title):
+                continue
+            # 日期：在链接块附近 ±400 字符内查找
+            win = html[max(0, m.start() - 200): m.end() + 400]
+            dm = re.search(r"(\d{4})[/-](\d{2})[/-](\d{2})", win)
+            date = "%s-%s-%s" % (dm.group(1), dm.group(2), dm.group(3)) if dm else ""
+            out.append({
+                "title": title, "region": "山西", "amount_wan": 0,
+                "publish_date": date, "buyer": "", "contact": "", "url": url,
+                "type": typ, "qual": [], "keywords": kws,
+                "source": "山西省公共资源交易平台",
+            })
+        return out
+
+    def fetch(self, region, keyword, pages=None):
+        if not LIVE:
+            return []
+        cutoff = (date.today() - timedelta(days=self.WINDOW_DAYS))
+        items = []
+        for prefix, typ in self.SECTIONS:
+            for p in range(1, self.MAX_PAGES + 1):
+                url = "%s/%s/index.jhtml" % (self.BASE, prefix) if p == 1 \
+                    else "%s/%s/index_%d.jhtml" % (self.BASE, prefix, p)
+                try:
+                    html = self._get(url)
+                except Exception as e:
+                    print("[ShanxiGc] %s page%d 失败: %s" % (prefix, p, e))
+                    break
+                blk = self._parse(html, typ, prefix)
+                if not blk:
+                    break
+                # 窗口截断：本页最旧日期早于 cutoff 则停止
+                stop = False
+                for it in blk:
+                    if it["publish_date"] and "-" in it["publish_date"]:
+                        try:
+                            d = date(*map(int, it["publish_date"].split("-")))
+                            if d < cutoff:
+                                stop = True
+                        except Exception:
+                            pass
+                items.extend(blk)
+                if stop:
+                    break
+                time.sleep(self.PAGE_DELAY)
+            print("[ShanxiGc] %s 累计 %d 条" % (prefix, len([i for i in items if i["type"] == typ])))
+        return items
+
+
+class ProvinceBrowserSource(BaseSource):
+    """省级公共资源交易平台 · 通用浏览器源（Playwright 渲染 JS 列表页）。
+    适用：列表为 JS 渲染、静态 HTTP 抓不到的省级站。用页面内 JS 提取公告链接，
+    复用工程词库过滤（_kw / _is_notice / _is_goods_noise），仅保留工程类公告。
+    翻页：优先点击“下一页”类控件，失败即停。无第三方依赖之外的新增依赖。"""
+    PROVINCE = ""
+    SOURCE_NAME = ""
+    PRE_URL = ""           # 进列表前先访问（种 cookie/会话，绕过 403）
+    LIST = []              # [{"url":..., "type":"tender"/"award"}]
+    MAX_PAGES = 10
+    PAGE_DELAY = 1.2
+
+    _JS = """() => {
+        const out = [];
+        const re = /(\\d{4})[-/.](\\d{1,2})[-/.](\\d{1,2})/;
+        const a = [...document.querySelectorAll('a')];
+        for (const e of a) {
+            const t = (e.innerText || e.textContent || '').replace(/\\s+/g, '').trim();
+            const h = e.href || '';
+            if (t.length < 8 || t.length > 140) continue;
+            if (!/http/.test(h)) continue;
+            let d = '';
+            let node = e;
+            for (let i = 0; i < 5 && node; i++) {
+                const m = (node.textContent || '').match(re);
+                if (m) { d = m[0]; break; }
+                node = node.parentElement;
+            }
+            out.push({t: t, h: h, d: d});
+        }
+        return out;
+    }"""
+
+    def _filter(self, raw, typ):
+        out = []
+        seen = set()
+        for r in raw:
+            t, h, d = r["t"], r["h"], r["d"]
+            if t in ("首页", "上一页", "下一页", "更多", "返回", "尾页", "上一页"):
+                continue
+            if len(t) < 8:
+                continue
+            if not _kw(t) or _is_goods_noise(t) or not _is_notice(t):
+                continue
+            if h in seen:
+                continue
+            seen.add(h)
+            date = ""
+            if d:
+                p = re.match(r"(\d{4})[-/.](\d{1,2})[-/.](\d{2})", d)
+                if p:
+                    date = "%s-%02d-%02d" % (p.group(1), int(p.group(2)), int(p.group(3)))
+            out.append({
+                "title": t, "region": self.PROVINCE, "amount_wan": 0,
+                "publish_date": date, "buyer": "", "contact": "", "url": h,
+                "type": typ, "qual": [], "keywords": _kw(t),
+                "source": self.SOURCE_NAME,
+            })
+        return out
+
+    def _click_next(self, page):
+        sels = ["a:has-text('下一页')", "a:has-text('下页')", "li.next a", "a.next",
+                "button:has-text('下一页')", "a[title='下一页']",
+                ".pagination .next a", "a:has-text('»')", "a:has-text('>>')"]
+        for s in sels:
+            try:
+                el = page.query_selector(s)
+                if el and el.is_visible():
+                    el.click()
+                    return True
+            except Exception:
+                pass
+        return False
+
+    def _crawl_list(self, page, url, typ):
+        items = []
+        seen = set()
+        try:
+            page.goto(url, wait_until="domcontentloaded", timeout=45000)
+            page.wait_for_timeout(3500)
+        except Exception as e:
+            print("[%s] 列表页失败 %s: %s" % (self.__class__.__name__, url, e))
+            return items
+        for _ in range(self.MAX_PAGES):
+            try:
+                raw = page.evaluate(self._JS)
+            except Exception:
+                raw = []
+            blk = self._filter(raw, typ)
+            new = 0
+            for it in blk:
+                if it["url"] in seen:
+                    continue
+                seen.add(it["url"])
+                items.append(it)
+                new += 1
+            if new == 0:
+                break
+            if not self._click_next(page):
+                break
+            page.wait_for_timeout(int(self.PAGE_DELAY * 1000))
+        print("[%s] %s 累计 %d" % (self.__class__.__name__, url, len(items)))
+        return items
+
+    def fetch(self, region, keyword, pages=None):
+        if not LIVE or not self.LIST:
+            return []
+        out = []
+        try:
+            from playwright.sync_api import sync_playwright
+            with sync_playwright() as p:
+                b = p.chromium.launch(args=["--no-sandbox"])
+                ctx = b.new_context(user_agent=UA)
+                page = ctx.new_page()
+                if self.PRE_URL:
+                    try:
+                        page.goto(self.PRE_URL, wait_until="domcontentloaded", timeout=30000)
+                        page.wait_for_timeout(2000)
+                    except Exception as e:
+                        print("[%s] PRE_URL 失败: %s" % (self.__class__.__name__, e))
+                for ent in self.LIST:
+                    out.extend(self._crawl_list(page, ent["url"], ent["type"]))
+                b.close()
+        except Exception as e:
+            print("[%s] 浏览器抓取失败: %s" % (self.__class__.__name__, e))
+        return out
+
+
+class HebeiGcSource(ProvinceBrowserSource):
+    """河北省公共资源交易服务平台 · 工程建设。
+
+    说明：河北工程建设列表接口(getInfoMationListyzm)带验证码(WAF)，纯 HTTP 无法绕过；
+    列表索引页 jydt/003001/* 服务端返回 403。故改用浏览器渲染「交易大厅」(salesPlat.html)，
+    该页在服务端下发真实公告详情链接(jydt/003001/.../id.html，详情页本身可访问)，
+    提取其中工程建设类链接即可。类型为 best-effort（近期公告）。"""
+    PROVINCE = "河北"
+    SOURCE_NAME = "河北省公共资源交易服务平台"
+    PRE_URL = "https://szj.hebei.gov.cn/hbggfwpt/"
+    LIST = [
+        {"url": "https://szj.hebei.gov.cn/hbggfwpt/jydt/salesPlat.html", "type": "all"},
+    ]
+    MAX_PAGES = 1
+
+    _JS = """() => {
+        const out = [];
+        const re = /(\\d{4})\\D(\\d{1,2})\\D(\\d{1,2})/;
+        const a = [...document.querySelectorAll('a')];
+        for (const e of a) {
+            const h = e.href || '';
+            if (!/jydt\\/003001/.test(h)) continue;       // 仅工程建设详情链接
+            const t = (e.innerText || e.textContent || '').replace(/\\s+/g, '').trim();
+            if (t.length < 6) continue;
+            let d = '';
+            let node = e;
+            for (let i = 0; i < 5 && node; i++) {
+                const m = (node.textContent || '').match(re);
+                if (m) { d = m[0]; break; }
+                node = node.parentElement;
+            }
+            out.push({t: t, h: h, d: d});
+        }
+        return out;
+    }"""
+
+    def _filter(self, raw, typ):
+        out = []
+        seen = set()
+        for r in raw:
+            t, h, d = r["t"], r["h"], r["d"]
+            if t in ("首页", "上一页", "下一页", "更多", "返回", "尾页"):
+                continue
+            # 工程建设详情链接已限定范围；仅排除纯货物/服务噪声 + 非公告导航
+            if _is_goods_noise(t) or not _is_notice(t):
+                continue
+            if h in seen:
+                continue
+            seen.add(h)
+            # 类型：标题含 中标/成交/候选 → 中标相关；否则按招标公告处理
+            if any(k in t for k in ["中标", "成交", "候选"]):
+                itype = "award"
+            else:
+                itype = "tender"
+            date = ""
+            if d:
+                p = re.match(r"(\\d{4})[-/.](\\d{1,2})[-/.](\\d{2})", d)
+                if p:
+                    date = "%s-%02d-%02d" % (p.group(1), int(p.group(2)), int(p.group(3)))
+            # 区域：从标题 [省本级]/[xx市] 提取
+            reg = "河北"
+            m = re.search(r"\[([^\[\]]+)\]", t)
+            if m and any(k in m.group(1) for k in ("市", "省", "县", "区", "盟")):
+                reg = "河北" + m.group(1)
+            out.append({
+                "title": t, "region": reg, "amount_wan": 0,
+                "publish_date": date, "buyer": "", "contact": "", "url": h,
+                "type": itype, "qual": [], "keywords": _kw(t) or ["工程"],
+                "source": self.SOURCE_NAME,
+            })
+        return out
+
+
+class ShaanxiGcSource(ProvinceBrowserSource):
+    """陕西省公共资源交易中心 · 工程建设。"""
+    PROVINCE = "陕西"
+    SOURCE_NAME = "陕西省公共资源交易中心"
+    LIST = [
+        {"url": "https://www.sxggzyjy.cn/jydt/001001/001001001/001001001001/subPage.html", "type": "tender"},
+        {"url": "https://www.sxggzyjy.cn/jydt/001001/001001001/001001001003/subPage.html", "type": "award"},
+        {"url": "https://www.sxggzyjy.cn/jydt/001001/001001001/001001001005/subPage.html", "type": "award"},
+    ]
+
+
+class HenanGcSource(BaseSource):
+    """河南省公共资源交易中心 · 工程建设（新点 WebBuilder JSON 接口直采，零第三方依赖）。
+
+    接口：POST /EpointWebBuilder/rest/frontAppCustomAction/getPageInfoListNewYzm
+    参数：siteGuid + categoryNum=002001(工程建设) + xiaqucode=4100(河南) + pageIndex/pageSize
+    返回：custom.infodata[]，字段 title / infourl(相对) / startdate / categorynum(002001001招标…
+    002001003中标候选…002001004中标结果) / customtitle(含[河南省·xx]区域标签)。"""
+    PROVINCE = "河南"
+    SOURCE_NAME = "河南省公共资源交易中心"
+    API = "http://hnsggzyjy.henan.gov.cn/EpointWebBuilder/rest/frontAppCustomAction/getPageInfoListNewYzm"
+    SITE_GUID = "7eb5f7f1-9041-43ad-8e13-8fcb82ea831a"
+    XIAQU = "4100"
+    PAGE_SIZE = 20
+    MAX_PAGES = 25
+    WINDOW_DAYS = 45
+    TENDER_PREFIX = "002001001"                       # 招标公告
+    AWARD_PREFIXES = ("002001003", "002001004", "002001005", "002001006", "002001007")
+
+    def _post(self, page_index):
+        body = ("siteGuid=%s&categoryNum=002001&kw=&startDate=&endDate=&pageIndex=%d"
+                "&pageSize=%d&jytype=&xiaqucode=%s") % (
+            self.SITE_GUID, page_index, self.PAGE_SIZE, self.XIAQU)
+        req = urllib.request.Request(
+            self.API, data=body.encode("utf-8"),
+            headers={"User-Agent": UA, "Content-Type": "application/x-www-form-urlencoded",
+                      "X-Requested-With": "XMLHttpRequest",
+                      "Referer": "http://hnsggzyjy.henan.gov.cn/jyxx/transaction_notice.html"})
+        with urllib.request.urlopen(req, timeout=TIMEOUT, context=_SSL_IGNORE) as r:
+            return json.loads(r.read().decode("utf-8", "ignore"))
+
+    def fetch(self, region, keyword, pages=None):
+        if not LIVE:
+            return []
+        cutoff = (date.today() - timedelta(days=self.WINDOW_DAYS))
+        items, seen = [], set()
+        for pg in range(self.MAX_PAGES):
+            try:
+                j = self._post(pg)
+                rows = (j.get("custom") or {}).get("infodata") or []
+            except Exception as e:
+                print("[HenanGc] page%d 失败: %s" % (pg, e))
+                break
+            if not rows:
+                break
+            page_old = 0
+            for row in rows:
+                title = (row.get("title") or "").strip()
+                if not title or len(title) < 6:
+                    continue
+                # 工程建设栏目已限定范围，仅排除纯货物/服务噪声；不再强求命中工程词库
+                if _is_goods_noise(title):
+                    continue
+                url = row.get("infourl") or ""
+                if url.startswith("/"):
+                    url = "http://hnsggzyjy.henan.gov.cn" + url
+                if not url or url in seen:
+                    continue
+                seen.add(url)
+                cat = row.get("categorynum", "")
+                if cat.startswith(self.TENDER_PREFIX):
+                    itype = "tender"
+                elif cat.startswith(self.AWARD_PREFIXES):
+                    itype = "award"
+                else:
+                    itype = "tender"
+                sd = row.get("startdate", "") or ""
+                d = sd[:10] if len(sd) >= 10 else ""
+                if d and "-" in d:
+                    try:
+                        if date(*map(int, d.split("-"))) < cutoff:
+                            page_old += 1
+                    except Exception:
+                        pass
+                # 区域：customtitle 含 [河南省·xx市·xx县]
+                reg = "河南"
+                ct = row.get("customtitle", "") or ""
+                m = re.search(r"\[河南省[·\-]([^\[\]]{1,20})\]", ct)
+                if m:
+                    reg = "河南" + m.group(1)
+                items.append({
+                    "title": title, "region": reg, "amount_wan": 0,
+                    "publish_date": d, "buyer": "", "contact": "", "url": url,
+                    "type": itype, "qual": [], "keywords": _kw(title) or ["工程"],
+                    "source": self.SOURCE_NAME,
+                })
+            # 整页均超出时间窗才停（避免个别旧“招标计划”误截）
+            if rows and page_old >= len(rows):
+                break
+            time.sleep(0.3)
+        print("[HenanGc] 累计 %d 条" % len(items))
+        return items
+
+
+class NmgGcSource(BaseSource):
+    """内蒙古自治区公共资源交易网 · 工程建设（TRS 搜索开放接口直采，零第三方依赖）。
+
+    接口：GET /trssearch/openSearch/searchPublishResource
+    参数：noticeTypeName(招标公告/中标候选人公示) + transactionTypeName=工程建设 + pageNum/pageSize
+    返回：data.data[]，字段 projectName/noticeName(标题) / noticeSendTime(发布时间) /
+    sourceDataKey(详情id) / regionName / platformName / noticeTypeName。
+    详情页：jyxx/index_24.html?id={sourceDataKey}（已验证 200）。
+    注：内蒙古无“中标公告”枚举值，中标类统一用“中标候选人公示”。"""
+    PROVINCE = "内蒙古"
+    SOURCE_NAME = "内蒙古自治区公共资源交易网"
+    API = "https://ggzyjy.nmg.gov.cn/trssearch/openSearch/searchPublishResource"
+    PAGE_SIZE = 20
+    MAX_PAGES = 25
+    WINDOW_DAYS = 45
+    NOTICE_TYPES = [("招标公告", "tender"), ("中标候选人公示", "award")]
+
+    def _get(self, notice, page_num):
+        qs = urllib.parse.urlencode({
+            "noticeName": "", "projectCode": "", "bidSectionCodes": "",
+            "pageSize": self.PAGE_SIZE, "pageNum": page_num,
+            "noticeTypeName": notice, "platformCode": "", "regionCode": "",
+            "startTime": "", "endTime": "", "transactionTypeName": "工程建设",
+            "industriesTypeName": "",
+        })
+        url = self.API + "?" + qs
+        req = urllib.request.Request(
+            url, headers={"User-Agent": UA, "X-Requested-With": "XMLHttpRequest",
+                          "Referer": "https://ggzyjy.nmg.gov.cn/jyxx/jyxxss/"})
+        with urllib.request.urlopen(req, timeout=TIMEOUT, context=_SSL_IGNORE) as r:
+            return json.loads(r.read().decode("utf-8", "ignore"))
+
+    def fetch(self, region, keyword, pages=None):
+        if not LIVE:
+            return []
+        cutoff = (date.today() - timedelta(days=self.WINDOW_DAYS))
+        items, seen = [], set()
+        for notice, typ in self.NOTICE_TYPES:
+            for pg in range(1, self.MAX_PAGES + 1):
+                try:
+                    j = self._get(notice, pg)
+                    rows = (j.get("data") or {}).get("data") or []
+                except Exception as e:
+                    print("[NmgGc] %s page%d 失败: %s" % (notice, pg, e))
+                    break
+                if not rows:
+                    break
+                page_old = 0
+                for row in rows:
+                    title = (row.get("noticeName") or row.get("projectName") or "").strip()
+                    if not title or len(title) < 6:
+                        continue
+                    # 工程建设栏目已限定范围，仅排除纯货物/服务噪声
+                    if _is_goods_noise(title):
+                        continue
+                    key = row.get("sourceDataKey", "")
+                    url = ("https://ggzyjy.nmg.gov.cn/jyxx/index_24.html?id=%s" % key) if key else ""
+                    if not url or url in seen:
+                        continue
+                    seen.add(url)
+                    sd = row.get("noticeSendTime") or row.get("docpubtime") or ""
+                    d = sd[:10] if len(sd) >= 10 else ""
+                    if d and "-" in d:
+                        try:
+                            if date(*map(int, d.split("-"))) < cutoff:
+                                page_old += 1
+                        except Exception:
+                            pass
+                    rn = row.get("regionName") or row.get("platformName") or ""
+                    reg = "内蒙古"
+                    if rn and rn not in ("内蒙古", "内蒙古自治区"):
+                        reg = "内蒙古" + rn
+                    items.append({
+                        "title": title, "region": reg, "amount_wan": 0,
+                        "publish_date": d, "buyer": "", "contact": "", "url": url,
+                        "type": typ, "qual": [], "keywords": _kw(title) or ["工程"],
+                        "source": self.SOURCE_NAME,
+                    })
+                # 整页均超出时间窗才停
+                if rows and page_old >= len(rows):
+                    break
+                time.sleep(0.3)
+            print("[NmgGc] %s 累计 %d" % (notice, len([i for i in items if i["type"] == typ])))
+        return items
 
 
 class GGZYNationalSource(GenericListSource):
@@ -496,8 +1001,221 @@ class MockTenderSource(BaseSource):
         return out
 
 
+# ====================== 全国公共资源(无头浏览器真爬) ======================
+_PROV_CODE = {
+    "11": "北京", "12": "天津", "13": "河北", "14": "山西", "15": "内蒙古",
+    "21": "辽宁", "22": "吉林", "23": "黑龙江", "31": "上海", "32": "江苏",
+    "33": "浙江", "34": "安徽", "35": "福建", "36": "江西", "37": "山东",
+    "41": "河南", "42": "湖北", "43": "湖南", "44": "广东", "45": "广西",
+    "46": "海南", "50": "重庆", "51": "四川", "52": "贵州", "53": "云南",
+    "54": "西藏", "61": "陕西", "62": "甘肃", "63": "青海", "64": "宁夏",
+    "65": "新疆", "71": "台湾", "81": "香港", "82": "澳门",
+}
+
+def _province_code_to_name(code):
+    if not code or len(code) < 2:
+        return ""
+    return _PROV_CODE.get(code[:2], "")
+
+
+# 省份全称→简称归一化（避免"云南省"与"云南"被当成两个省，导致区域筛选/统计错乱）
+_PROV_NORM = {
+    "北京市": "北京", "天津市": "天津", "河北省": "河北", "山西省": "山西",
+    "内蒙古自治区": "内蒙古", "辽宁省": "辽宁", "吉林省": "吉林", "黑龙江省": "黑龙江",
+    "上海市": "上海", "江苏省": "江苏", "浙江省": "浙江", "安徽省": "安徽",
+    "福建省": "福建", "江西省": "江西", "山东省": "山东", "河南省": "河南",
+    "湖北省": "湖北", "湖南省": "湖南", "广东省": "广东", "广西壮族自治区": "广西",
+    "海南省": "海南", "重庆市": "重庆", "四川省": "四川", "贵州省": "贵州",
+    "云南省": "云南", "西藏自治区": "西藏", "陕西省": "陕西", "甘肃省": "甘肃",
+    "青海省": "青海", "宁夏回族自治区": "宁夏",     "新疆维吾尔自治区": "新疆",
+}
+_PROV_SHORT = set(_PROV_NORM.values())
+
+def _norm_prov(name):
+    if not name:
+        return ""
+    name = name.strip()
+    if name in _PROV_NORM:
+        return _PROV_NORM[name]
+    if name in _PROV_SHORT:
+        return name
+    # 去行政后缀："太原市"->"太原"、"新疆维吾尔自治区"->"新疆"
+    bare = name
+    for suf in ("维吾尔自治区", "壮族自治区", "回族自治区", "自治区",
+                "特别行政区", "省", "市"):
+        if bare.endswith(suf):
+            bare = bare[: -len(suf)]
+            break
+    # 省+市混写（"山西太原"）或省简称前缀
+    for short in _PROV_SHORT:
+        if bare == short or bare.startswith(short):
+            return short
+    # 纯市名反查（"太原"->"山西"）
+    if bare in CITY2PROV:
+        return CITY2PROV[bare]
+    return name
+
+
+class GGZYBrowserSource(BaseSource):
+    """全国公共资源交易平台(ggzy.gov.cn) 无头浏览器真爬。
+    该站列表为 Vue SPA，普通 HTTP 只能拿首页零星几条；用 Playwright 在页面上下文内调用
+    其背后的 JSON 接口(getTradList)翻页，覆盖全国各省份的招标/中标公告。
+    仅 LIVE 模式生效；首次 fetch 全量抓取并缓存，后续查询复用。"""
+    _CACHE = None
+    # (HEADER_DEAL_TYPE, 默认类型)：01=招标/资审公告，02=中标公告(混有采购，仅保留含"中标"的)
+    CATEGORIES = [("01", "tender"), ("02", "award")]
+    MAX_PAGES = 50
+
+    def _scrape_all(self):
+        try:
+            os.environ.setdefault("PLAYWRIGHT_BROWSERS_PATH", "D:/WorkBuddy/ms-playwright")
+            from playwright.sync_api import sync_playwright
+        except Exception as e:
+            print("[GGZYBrowser] 未安装 playwright，跳过: %s" % e)
+            return []
+        items = []
+        from datetime import datetime, timedelta
+        end = datetime.now().strftime("%Y-%m-%d")
+        begin = (datetime.now() - timedelta(days=60)).strftime("%Y-%m-%d")
+        js = """(p) => (async () => {
+          const fd = new URLSearchParams();
+          fd.set('DEAL_CLASSIFY', p.classify);
+          fd.set('SOURCE_TYPE','1'); fd.set('DEAL_TIME','02');
+          fd.set('TIMEBEGIN', p.begin); fd.set('TIMEEND', p.end);
+          fd.set('PAGENUMBER', String(p.page));
+          const ctrl = new AbortController();
+          const timer = setTimeout(() => ctrl.abort(), 20000);
+          let r;
+          try {
+            r = await fetch('/information/pubTradingInfo/getTradList', {
+              method:'POST', body: fd,
+              headers:{'X-Requested-With':'XMLHttpRequest','X-Pass-Token':''},
+              signal: ctrl.signal
+            });
+          } catch(e) { clearTimeout(timer); return null; }
+          clearTimeout(timer);
+          const j = await r.json();
+          return (j && j.data && j.data.records) ? j.data.records : [];
+        })()"""
+        # 探测数据池总量(total)，用于自适应页数，抓满整个时间窗
+        total_js = """(p) => (async () => {
+          const fd = new URLSearchParams();
+          fd.set('DEAL_CLASSIFY', p.classify);
+          fd.set('SOURCE_TYPE','1'); fd.set('DEAL_TIME','02');
+          fd.set('TIMEBEGIN', p.begin); fd.set('TIMEEND', p.end);
+          fd.set('PAGENUMBER', '1');
+          const ctrl = new AbortController();
+          const timer = setTimeout(() => ctrl.abort(), 20000);
+          try {
+            const r = await fetch('/information/pubTradingInfo/getTradList', {
+              method:'POST', body: fd,
+              headers:{'X-Requested-With':'XMLHttpRequest','X-Pass-Token':''},
+              signal: ctrl.signal
+            });
+            const j = await r.json();
+            return (j && j.data && j.data.total) ? j.data.total : 0;
+          } catch(e) { return 0; } finally { clearTimeout(timer); }
+        })()"""
+        try:
+            with sync_playwright() as p:
+                b = p.chromium.launch(headless=True,
+                                      args=["--no-sandbox", "--disable-dev-shm-usage"])
+                ctx = b.new_context(
+                    user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36",
+                    locale="zh-CN",
+                )
+                page = ctx.new_page()
+                for code, deftype in self.CATEGORIES:
+                    # 服务器按页面所在标签 URL 过滤，必须每个类别先导航到对应标签
+                    page_ok = False
+                    for _ in range(3):
+                        try:
+                            page.goto("https://www.ggzy.gov.cn/deal/dealList.html?HEADER_DEAL_TYPE=%s" % code, wait_until="domcontentloaded", timeout=45000)
+                            page_ok = True
+                            break
+                        except Exception as e:
+                            print("[GGZYBrowser] goto 重试(%s): %s" % (code, e))
+                            time.sleep(2)
+                    if not page_ok:
+                        print("[GGZYBrowser] %s 导航失败，跳过该类别" % code)
+                        continue
+                    time.sleep(4)
+                    # 动态探测数据池总量，自适应页数（抓满时间窗内全部，封顶 90 防过慢）
+                    try:
+                        total = page.evaluate(total_js, {"classify": code, "begin": begin, "end": end}) or 0
+                    except Exception as e:
+                        print("[GGZYBrowser] 探测total异常: %s" % e); total = 0
+                    pages = min((total // 20) + 1, 90) if total else self.MAX_PAGES
+                    print("[GGZYBrowser] code=%s 数据池 total=%d -> 计划抓 %d 页" % (code, total, pages))
+                    for pg in range(1, pages + 1):
+                        try:
+                            recs = page.evaluate(js, {"classify": code, "page": pg,
+                                                      "begin": begin, "end": end})
+                        except Exception as e:
+                            print("[GGZYBrowser] 页%d 异常: %s" % (pg, e))
+                            break
+                        if recs is None:
+                            print("[GGZYBrowser] 页%d 超时跳过" % pg)
+                            continue
+                        if not recs:
+                            break
+                        for rec in recs:
+                            title = (rec.get("title") or "").strip()
+                            if not title:
+                                continue
+                            itype = rec.get("informationTypeText") or ""
+                            # 02 标签混有大量采购合同/更正，仅保留含"中标"的
+                            if code == "02" and "中标" not in itype:
+                                continue
+                            kw = _kw(title)
+                            if not kw:
+                                continue
+                            if not _is_notice(title) or _is_goods_noise(title):
+                                continue
+                            prov = rec.get("provinceText") or rec.get("cityText") or ""
+                            if not prov and rec.get("province"):
+                                prov = _province_code_to_name(rec.get("province"))
+                            prov = _norm_prov(prov)
+                            t = "award" if ("中标" in itype) else deftype
+                            url = rec.get("url") or ""
+                            if url.startswith("/"):
+                                url = "https://www.ggzy.gov.cn" + url
+                            items.append({
+                                "title": title, "region": prov, "amount_wan": 0,
+                                "publish_date": rec.get("publishTime") or "",
+                                "buyer": "", "contact": "", "url": url,
+                                "type": t, "qual": [], "keywords": kw,
+                                "source": "全国公共资源交易平台",
+                                "biz": rec.get("businessTypeText") or "",
+                            })
+                        print("[GGZYBrowser] code=%s page=%d +%d (累计 %d)" %
+                              (code, pg, len(recs), len(items)))
+                        time.sleep(0.3)
+                b.close()
+        except Exception as e:
+            print("[GGZYBrowser] 浏览器抓取失败: %s" % e)
+            return items
+        return items
+
+    def fetch(self, region, keyword, pages=5):
+        if not LIVE:
+            return []
+        if self._CACHE is None:
+            self._CACHE = self._scrape_all()
+        out = []
+        for it in self._CACHE:
+            if keyword:
+                hay = it["title"] + " " + " ".join(it["keywords"])
+                if keyword not in hay:
+                    continue
+            out.append(it)
+        return out
+
+
 # ====================== 聚合 + 去重 + 评分 ======================
-SOURCES = [ShanxiTenderSource(), GGZYNationalSource(), ChinaGovPurchaseSource(), MockTenderSource()]
+SOURCES = [GGZYBrowserSource(), ShanxiGcSource(), ShanxiTenderSource(),
+           HebeiGcSource(), ShaanxiGcSource(), HenanGcSource(), NmgGcSource(),
+           GGZYNationalSource(), ChinaGovPurchaseSource(), MockTenderSource()]
 
 
 def aggregate(region="", keyword="", ttype="all"):
@@ -518,6 +1236,10 @@ def aggregate(region="", keyword="", ttype="all"):
                 items.append(it)
         except Exception as e:
             print("[aggregate] 源异常: %s" % e)
+
+    # 省份归一兜底（处理"山西太原""太原市"等混写，保证区域筛选/统计一致）
+    for it in items:
+        it["region"] = _norm_prov(it.get("region", ""))
 
     # 区域筛选：有匹配的 → 只显示匹配区域；无匹配的 → 显示全部（不硬丢）
     if region:
